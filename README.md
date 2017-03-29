@@ -8,13 +8,13 @@ This project has two parts:
   1. The second part is to improve the previous solution with features selected by the student such as Generic Routing Encapsulation IPv6 and Multiprotocol BGP for IPv6
 
 ### How to configure:
-Project Part 1
+#### Project Part 1
 - Open GNS3 and load the file _Projecto Arquitectura de Redes - Parte 1.gns3_
 - Click on the play button to start all the devices
 - Double click on each device and copy from the file _Projecto Arquitectura de Redes - Parte 1.txt_ the configuration
 - 
 
-Project Part 2
+#### Project Part 2
 - Open GNS3 and load the file _Projecto Arquitectura de Redes - Parte 2.gns3_
 - Click on the play button to start all the devices
 - Double click on each device and copy from the file _Projecto Arquitectura de Redes - Parte 2.txt_ the configuration
