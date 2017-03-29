@@ -1,0 +1,38 @@
+Nov 25 18:06:18.457 HYPERVISOR: Release 0.2.16-amd64/Darwin (tag 2015060118)
+Nov 25 18:06:18.458 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 50468.
+Nov 25 18:06:18.575 HYPERVISOR: exec_cmd: hypervisor version 
+Nov 25 18:06:18.591 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/MarianaCruz/Desktop/proj1VLANSCHECK/project-files/dynamips 
+Nov 25 18:06:18.591 GENERAL: working_dir=/Users/MarianaCruz/Desktop/proj1VLANSCHECK/project-files/dynamips
+Nov 25 18:06:18.601 HYPERVISOR: exec_cmd: vm create R5 5 c3725 
+Nov 25 18:06:18.601 VM: VM R5 created.
+Nov 25 18:06:18.616 HYPERVISOR: exec_cmd: vm set_con_tcp_port R5 5004 
+Nov 25 18:06:18.631 HYPERVISOR: exec_cmd: c3725 get_mac_addr R5 
+Nov 25 18:06:18.642 HYPERVISOR: exec_cmd: vm set_ios R5 /Users/MarianaCruz/GNS3/images/IOS/c3725-advipservicesk9-mz.124-21.image 
+Nov 25 18:06:18.666 HYPERVISOR: exec_cmd: vm set_disk0 R5 0 
+Nov 25 18:06:18.681 HYPERVISOR: exec_cmd: c3725 set_mac_addr R5 c205.0a15.0000 
+Nov 25 18:06:18.690 HYPERVISOR: exec_cmd: vm get_status R5 
+Nov 25 18:06:18.694 HYPERVISOR: exec_cmd: vm set_idle_pc R5 0x60a6a1e0 
+Nov 25 18:06:18.698 HYPERVISOR: exec_cmd: vm set_nvram R5 256 
+Nov 25 18:06:18.709 HYPERVISOR: exec_cmd: vm set_config R5 configs/i5_startup-config.cfg 
+Nov 25 18:06:19.386 HYPERVISOR: exec_cmd: nio create_udp udp-ad69f41a-67cc-4f2b-9e58-ae3e4ff10869 10016 127.0.0.1 10017 
+Nov 25 18:06:19.396 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R5 0 0 udp-ad69f41a-67cc-4f2b-9e58-ae3e4ff10869 
+Nov 25 18:06:19.400 HYPERVISOR: exec_cmd: vm get_status R5 
+Nov 25 18:06:19.428 HYPERVISOR: exec_cmd: nio create_udp udp-20351d9b-3a9d-49e6-a225-acee407158ec 10018 127.0.0.1 10019 
+Nov 25 18:06:19.450 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R5 0 1 udp-20351d9b-3a9d-49e6-a225-acee407158ec 
+Nov 25 18:06:19.466 HYPERVISOR: exec_cmd: vm get_status R5 
+Nov 25 18:06:30.439 HYPERVISOR: exec_cmd: vm set_ghost_status R5 2 
+Nov 25 18:06:30.441 HYPERVISOR: exec_cmd: vm set_ghost_file R5 c3725-advipservicesk9-mz.124-21.image-128.ghost 
+Nov 25 18:06:30.570 HYPERVISOR: exec_cmd: vm get_status R5 
+Nov 25 18:06:30.572 HYPERVISOR: exec_cmd: vm start R5 
+Nov 25 18:09:24.823 HYPERVISOR: exec_cmd: vm get_status R5 
+Nov 25 18:09:24.828 HYPERVISOR: exec_cmd: vm stop R5 
+Nov 25 18:09:24.955 VM: VM R5 shutdown.
+Nov 25 18:09:24.956 HYPERVISOR: exec_cmd: vm extract_config R5 
+Nov 25 18:09:34.045 HYPERVISOR: exec_cmd: vm extract_config R5 
+Nov 25 18:09:34.269 HYPERVISOR: exec_cmd: vm get_status R5 
+Nov 25 18:09:34.319 HYPERVISOR: exec_cmd: vm extract_config R5 
+Nov 25 18:09:34.350 HYPERVISOR: exec_cmd: vm delete R5 
+Nov 25 18:09:34.350 VM: VM R5 destroyed.
+Nov 25 18:09:34.389 HYPERVISOR: exec_cmd: hypervisor stop 
+Nov 25 18:09:34.462 HYPERVISOR: Stopped.
+Nov 25 18:09:34.462 GENERAL: reset done.

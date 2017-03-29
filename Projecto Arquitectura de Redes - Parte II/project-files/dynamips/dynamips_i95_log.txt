@@ -1,0 +1,19 @@
+Nov 25 18:09:46.967 HYPERVISOR: Release 0.2.16-amd64/Darwin (tag 2015060118)
+Nov 25 18:09:46.967 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 50632.
+Nov 25 18:09:47.053 HYPERVISOR: exec_cmd: hypervisor version 
+Nov 25 18:09:47.086 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/MarianaCruz/Desktop/proj1VLANSCHECK/project-files/dynamips 
+Nov 25 18:09:47.087 GENERAL: working_dir=/Users/MarianaCruz/Desktop/proj1VLANSCHECK/project-files/dynamips
+Nov 25 18:09:47.103 HYPERVISOR: exec_cmd: ethsw create SW8 
+Nov 25 18:09:47.683 HYPERVISOR: exec_cmd: nio create_udp udp-63d3a030-d02a-49c1-917d-2cd46c62061d 10015 127.0.0.1 10014 
+Nov 25 18:09:47.696 HYPERVISOR: exec_cmd: ethsw add_nio SW8 udp-63d3a030-d02a-49c1-917d-2cd46c62061d 
+Nov 25 18:09:47.713 HYPERVISOR: exec_cmd: ethsw set_access_port SW8 udp-63d3a030-d02a-49c1-917d-2cd46c62061d 1 
+Nov 25 18:09:47.744 HYPERVISOR: exec_cmd: nio create_udp udp-54874fbe-627c-4ed2-938d-23f7eb91abc8 10017 127.0.0.1 10016 
+Nov 25 18:09:47.760 HYPERVISOR: exec_cmd: ethsw add_nio SW8 udp-54874fbe-627c-4ed2-938d-23f7eb91abc8 
+Nov 25 18:09:47.772 HYPERVISOR: exec_cmd: ethsw set_access_port SW8 udp-54874fbe-627c-4ed2-938d-23f7eb91abc8 1 
+Nov 25 18:09:47.800 HYPERVISOR: exec_cmd: nio create_udp udp-fa014b37-5658-483a-b125-f16f465ccdcd 10019 127.0.0.1 10018 
+Nov 25 18:09:47.822 HYPERVISOR: exec_cmd: ethsw add_nio SW8 udp-fa014b37-5658-483a-b125-f16f465ccdcd 
+Nov 25 18:09:47.838 HYPERVISOR: exec_cmd: ethsw set_access_port SW8 udp-fa014b37-5658-483a-b125-f16f465ccdcd 1 
+Nov 25 20:55:13.128 HYPERVISOR: exec_cmd: ethsw delete SW8 
+Nov 25 20:55:13.234 HYPERVISOR: exec_cmd: hypervisor stop 
+Nov 25 20:55:13.360 HYPERVISOR: Stopped.
+Nov 25 20:55:13.361 GENERAL: reset done.

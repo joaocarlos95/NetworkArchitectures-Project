@@ -1,0 +1,37 @@
+Dec 09 11:53:47.758 HYPERVISOR: Release 0.2.14-amd64/Linux (tag 2014092320)
+Dec 09 11:53:47.758 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 41754.
+Dec 09 11:53:47.774 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 09 11:53:47.774 HYPERVISOR: exec_cmd: hypervisor working_dir /afs/.ist.utl.pt/users/2/8/ist182528/Desktop/Projecto Arquitectura de Redes - Parte 2 (teste)/project-files/dynamips 
+Dec 09 11:53:47.774 GENERAL: working_dir=/afs/.ist.utl.pt/users/2/8/ist182528/Desktop/Projecto Arquitectura de Redes - Parte 2 (teste)/project-files/dynamips
+Dec 09 11:53:47.775 HYPERVISOR: exec_cmd: vm create R18 31 c3725 
+Dec 09 11:53:47.779 VM: VM R18 created.
+Dec 09 11:53:47.780 HYPERVISOR: exec_cmd: vm set_con_tcp_port R18 5020 
+Dec 09 11:53:47.781 HYPERVISOR: exec_cmd: c3725 get_mac_addr R18 
+Dec 09 11:53:47.782 HYPERVISOR: exec_cmd: vm set_ios R18 /afs/.ist.utl.pt/users/2/8/ist182528/GNS3/images/IOS/c3725-advipservicesk9-mz.124-21.image 
+Dec 09 11:53:47.782 HYPERVISOR: exec_cmd: vm set_nvram R18 256 
+Dec 09 11:53:47.783 HYPERVISOR: exec_cmd: vm set_disk0 R18 0 
+Dec 09 11:53:47.788 HYPERVISOR: exec_cmd: vm set_config R18 configs/i31_startup-config.cfg 
+Dec 09 11:58:06.306 HYPERVISOR: exec_cmd: nio create_udp udp-90c7877b-2d38-42f4-9a35-07bf6ce4f822 10010 127.0.0.1 10011 
+Dec 09 11:58:06.316 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R18 0 0 udp-90c7877b-2d38-42f4-9a35-07bf6ce4f822 
+Dec 09 11:58:06.317 HYPERVISOR: exec_cmd: vm get_status R18 
+Dec 09 11:58:09.964 HYPERVISOR: exec_cmd: nio create_udp udp-c16c6eba-ee21-4079-9571-fd3b8a582ddd 10015 127.0.0.1 10014 
+Dec 09 11:58:09.965 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R18 0 1 udp-c16c6eba-ee21-4079-9571-fd3b8a582ddd 
+Dec 09 11:58:09.967 HYPERVISOR: exec_cmd: vm get_status R18 
+Dec 09 13:08:32.596 HYPERVISOR: exec_cmd: vm rename R18 52 
+Dec 09 13:09:24.681 HYPERVISOR: exec_cmd: vm rename 52 R17 
+Dec 09 13:28:13.644 HYPERVISOR: exec_cmd: vm extract_config R17 
+Dec 09 13:28:13.981 HYPERVISOR: exec_cmd: vm extract_config R17 
+Dec 09 13:28:14.229 HYPERVISOR: exec_cmd: vm extract_config R17 
+Dec 09 13:28:14.426 HYPERVISOR: exec_cmd: vm extract_config R17 
+Dec 09 13:29:46.011 HYPERVISOR: exec_cmd: vm extract_config R17 
+Dec 09 13:30:17.713 HYPERVISOR: exec_cmd: vm extract_config R17 
+Dec 09 13:30:17.901 HYPERVISOR: exec_cmd: vm extract_config R17 
+Dec 09 13:30:18.089 HYPERVISOR: exec_cmd: vm extract_config R17 
+Dec 09 13:30:18.280 HYPERVISOR: exec_cmd: vm extract_config R17 
+Dec 09 13:30:27.661 HYPERVISOR: exec_cmd: vm get_status R17 
+Dec 09 13:30:27.670 HYPERVISOR: exec_cmd: vm extract_config R17 
+Dec 09 13:30:27.676 HYPERVISOR: exec_cmd: vm delete R17 
+Dec 09 13:30:27.676 VM: VM R17 destroyed.
+Dec 09 13:30:27.727 HYPERVISOR: exec_cmd: hypervisor stop 
+Dec 09 13:30:27.993 HYPERVISOR: Stopped.
+Dec 09 13:30:27.993 GENERAL: reset done.

@@ -1,0 +1,26 @@
+Dec 09 22:00:31.253 HYPERVISOR: Release 0.2.14-x86/Windows (tag 2014092320)
+Dec 09 22:00:31.254 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 11069.
+Dec 09 22:00:31.449 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 09 22:00:31.483 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\ccost\Desktop\Projecto Arquitectura de Redes - Parte 2\project-files\dynamips 
+Dec 09 22:00:31.483 GENERAL: working_dir=C:\Users\ccost\Desktop\Projecto Arquitectura de Redes - Parte 2\project-files\dynamips
+Dec 09 22:00:31.512 HYPERVISOR: exec_cmd: vm create R8 3 c3725 
+Dec 09 22:00:31.514 VM: VM R8 created.
+Dec 09 22:00:31.545 HYPERVISOR: exec_cmd: vm set_con_tcp_port R8 5008 
+Dec 09 22:00:31.587 HYPERVISOR: exec_cmd: c3725 get_mac_addr R8 
+Dec 09 22:00:31.635 HYPERVISOR: exec_cmd: vm set_nvram R8 256 
+Dec 09 22:00:31.676 HYPERVISOR: exec_cmd: c3725 set_mac_addr R8 c203.1b64.0000 
+Dec 09 22:00:31.719 HYPERVISOR: exec_cmd: vm set_ios R8 C:/Users/ccost/GNS3/images/IOS/c3725-advipservicesk9-mz.124-21.image 
+Dec 09 22:00:31.758 HYPERVISOR: exec_cmd: vm set_disk0 R8 0 
+Dec 09 22:00:31.783 HYPERVISOR: exec_cmd: vm set_exec_area R8 64 
+Dec 09 22:00:31.830 HYPERVISOR: exec_cmd: vm set_config R8 configs/i3_startup-config.cfg 
+Dec 09 22:00:35.364 HYPERVISOR: exec_cmd: nio create_udp udp-771fafdd-e75e-448b-8647-457793b95773 10013 127.0.0.1 10012 
+Dec 09 22:00:35.404 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R8 0 0 udp-771fafdd-e75e-448b-8647-457793b95773 
+Dec 09 22:00:35.431 HYPERVISOR: exec_cmd: vm get_status R8 
+Dec 09 22:04:26.656 HYPERVISOR: exec_cmd: vm extract_config R8 
+Dec 09 22:04:27.381 HYPERVISOR: exec_cmd: vm get_status R8 
+Dec 09 22:04:27.547 HYPERVISOR: exec_cmd: vm extract_config R8 
+Dec 09 22:04:27.708 HYPERVISOR: exec_cmd: vm delete R8 
+Dec 09 22:04:27.708 VM: VM R8 destroyed.
+Dec 09 22:04:27.866 HYPERVISOR: exec_cmd: hypervisor stop 
+Dec 09 22:04:28.014 HYPERVISOR: Stopped.
+Dec 09 22:04:28.014 GENERAL: reset done.

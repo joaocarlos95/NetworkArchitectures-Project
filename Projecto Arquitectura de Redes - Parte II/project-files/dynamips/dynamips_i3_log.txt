@@ -1,0 +1,19 @@
+Dec 09 22:00:30.101 HYPERVISOR: Release 0.2.14-x86/Windows (tag 2014092320)
+Dec 09 22:00:30.102 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 11052.
+Dec 09 22:00:30.559 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 09 22:00:30.594 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\ccost\Desktop\Projecto Arquitectura de Redes - Parte 2\project-files\dynamips 
+Dec 09 22:00:30.594 GENERAL: working_dir=C:\Users\ccost\Desktop\Projecto Arquitectura de Redes - Parte 2\project-files\dynamips
+Dec 09 22:00:30.630 HYPERVISOR: exec_cmd: ethsw create SW3 
+Dec 09 22:00:34.767 HYPERVISOR: exec_cmd: nio create_udp udp-43996e7f-842b-4126-8301-cc6b4942d787 10000 127.0.0.1 10001 
+Dec 09 22:00:34.803 HYPERVISOR: exec_cmd: ethsw add_nio SW3 udp-43996e7f-842b-4126-8301-cc6b4942d787 
+Dec 09 22:00:34.850 HYPERVISOR: exec_cmd: ethsw set_access_port SW3 udp-43996e7f-842b-4126-8301-cc6b4942d787 1 
+Dec 09 22:00:34.972 HYPERVISOR: exec_cmd: nio create_udp udp-04fa75d2-d97a-46d2-9a16-562b2daab521 10002 127.0.0.1 10003 
+Dec 09 22:00:35.045 HYPERVISOR: exec_cmd: ethsw add_nio SW3 udp-04fa75d2-d97a-46d2-9a16-562b2daab521 
+Dec 09 22:00:35.082 HYPERVISOR: exec_cmd: ethsw set_access_port SW3 udp-04fa75d2-d97a-46d2-9a16-562b2daab521 1 
+Dec 09 22:00:35.783 HYPERVISOR: exec_cmd: nio create_udp udp-6b8fc4aa-e1b8-41ea-8e3b-97e730a45c14 10023 127.0.0.1 10022 
+Dec 09 22:00:35.814 HYPERVISOR: exec_cmd: ethsw add_nio SW3 udp-6b8fc4aa-e1b8-41ea-8e3b-97e730a45c14 
+Dec 09 22:00:35.860 HYPERVISOR: exec_cmd: ethsw set_access_port SW3 udp-6b8fc4aa-e1b8-41ea-8e3b-97e730a45c14 1 
+Dec 09 22:04:26.676 HYPERVISOR: exec_cmd: ethsw delete SW3 
+Dec 09 22:04:26.753 HYPERVISOR: exec_cmd: hypervisor stop 
+Dec 09 22:04:27.143 HYPERVISOR: Stopped.
+Dec 09 22:04:27.143 GENERAL: reset done.

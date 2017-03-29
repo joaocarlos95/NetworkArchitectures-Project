@@ -1,0 +1,40 @@
+Dec 01 21:25:24.966 HYPERVISOR: Release 0.2.14-x86/Windows (tag 2014092320)
+Dec 01 21:25:24.967 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 60750.
+Dec 01 21:25:24.993 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 01 21:25:25.000 HYPERVISOR: exec_cmd: hypervisor working_dir G:\Outros\Projecto AR\project-files\dynamips 
+Dec 01 21:25:25.000 GENERAL: working_dir=G:\Outros\Projecto AR\project-files\dynamips
+Dec 01 21:25:25.008 HYPERVISOR: exec_cmd: vm create R7 2 c3725 
+Dec 01 21:25:25.009 VM: VM R7 created.
+Dec 01 21:25:25.015 HYPERVISOR: exec_cmd: vm set_con_tcp_port R7 5017 
+Dec 01 21:25:25.022 HYPERVISOR: exec_cmd: c3725 get_mac_addr R7 
+Dec 01 21:25:25.031 HYPERVISOR: exec_cmd: vm set_ios R7 C:/Users/ccost/GNS3/images/IOS/c3725-advipservicesk9-mz.124-21.image 
+Dec 01 21:25:25.048 HYPERVISOR: exec_cmd: vm get_status R7 
+Dec 01 21:25:25.055 HYPERVISOR: exec_cmd: vm slot_add_binding R7 2 0 NM-4T 
+Dec 01 21:25:25.064 HYPERVISOR: exec_cmd: vm set_nvram R7 256 
+Dec 01 21:25:25.071 HYPERVISOR: exec_cmd: vm get_status R7 
+Dec 01 21:25:25.078 HYPERVISOR: exec_cmd: vm slot_add_binding R7 1 0 NM-16ESW 
+Dec 01 21:25:25.085 HYPERVISOR: exec_cmd: vm get_status R7 
+Dec 01 21:25:25.093 HYPERVISOR: exec_cmd: vm set_idle_pc R7 0x60a68e70 
+Dec 01 21:25:25.102 HYPERVISOR: exec_cmd: vm set_exec_area R7 64 
+Dec 01 21:25:25.110 HYPERVISOR: exec_cmd: vm set_disk0 R7 0 
+Dec 01 21:25:25.123 HYPERVISOR: exec_cmd: vm set_config R7 configs/i2_startup-config.cfg 
+Dec 01 21:25:33.149 HYPERVISOR: exec_cmd: nio create_udp udp-125dda71-12c6-48e2-a660-f7b1c0a7a892 10044 127.0.0.1 10045 
+Dec 01 21:25:33.170 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R7 0 0 udp-125dda71-12c6-48e2-a660-f7b1c0a7a892 
+Dec 01 21:25:33.185 HYPERVISOR: exec_cmd: vm get_status R7 
+Dec 01 21:25:35.485 HYPERVISOR: exec_cmd: vm set_ghost_status R7 2 
+Dec 01 21:25:35.493 HYPERVISOR: exec_cmd: vm set_ghost_file R7 c3725-advipservicesk9-mz.124-21.image-128.ghost 
+Dec 01 21:25:35.500 HYPERVISOR: exec_cmd: vm get_status R7 
+Dec 01 21:25:35.507 HYPERVISOR: exec_cmd: vm start R7 
+Dec 01 21:37:37.149 HYPERVISOR: exec_cmd: vm get_status R7 
+Dec 01 21:37:37.168 HYPERVISOR: exec_cmd: vm slot_disable_nio R7 0 0 
+Dec 01 21:37:37.194 HYPERVISOR: exec_cmd: vm slot_remove_nio_binding R7 0 0 
+Dec 01 21:37:37.209 HYPERVISOR: exec_cmd: nio delete udp-125dda71-12c6-48e2-a660-f7b1c0a7a892 
+Dec 01 21:37:37.235 HYPERVISOR: exec_cmd: vm get_status R7 
+Dec 01 21:37:37.243 HYPERVISOR: exec_cmd: vm stop R7 
+Dec 01 21:37:37.335 VM: VM R7 shutdown.
+Dec 01 21:37:37.342 HYPERVISOR: exec_cmd: vm extract_config R7 
+Dec 01 21:37:37.359 HYPERVISOR: exec_cmd: vm delete R7 
+Dec 01 21:37:37.359 VM: VM R7 destroyed.
+Dec 01 21:37:37.377 HYPERVISOR: exec_cmd: hypervisor stop 
+Dec 01 21:37:37.488 HYPERVISOR: Stopped.
+Dec 01 21:37:37.488 GENERAL: reset done.

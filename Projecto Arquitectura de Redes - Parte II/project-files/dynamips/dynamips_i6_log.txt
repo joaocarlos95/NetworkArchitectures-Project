@@ -1,0 +1,33 @@
+Dec 09 22:00:30.760 HYPERVISOR: Release 0.2.14-x86/Windows (tag 2014092320)
+Dec 09 22:00:30.761 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 11065.
+Dec 09 22:00:30.990 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 09 22:00:31.035 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\ccost\Desktop\Projecto Arquitectura de Redes - Parte 2\project-files\dynamips 
+Dec 09 22:00:31.035 GENERAL: working_dir=C:\Users\ccost\Desktop\Projecto Arquitectura de Redes - Parte 2\project-files\dynamips
+Dec 09 22:00:31.088 HYPERVISOR: exec_cmd: vm create R2 15 c3725 
+Dec 09 22:00:31.090 VM: VM R2 created.
+Dec 09 22:00:31.130 HYPERVISOR: exec_cmd: vm set_con_tcp_port R2 5001 
+Dec 09 22:00:31.192 HYPERVISOR: exec_cmd: c3725 get_mac_addr R2 
+Dec 09 22:00:31.237 HYPERVISOR: exec_cmd: vm set_nvram R2 256 
+Dec 09 22:00:31.270 HYPERVISOR: exec_cmd: c3725 set_mac_addr R2 c20f.2090.0000 
+Dec 09 22:00:31.303 HYPERVISOR: exec_cmd: vm get_status R2 
+Dec 09 22:00:31.350 HYPERVISOR: exec_cmd: vm set_idle_pc R2 0x60a68e70 
+Dec 09 22:00:31.377 HYPERVISOR: exec_cmd: vm get_status R2 
+Dec 09 22:00:31.412 HYPERVISOR: exec_cmd: vm slot_add_binding R2 1 0 NM-4T 
+Dec 09 22:00:31.441 HYPERVISOR: exec_cmd: vm set_ios R2 C:/Users/ccost/GNS3/images/IOS/c3725-advipservicesk9-mz.124-21.image 
+Dec 09 22:00:31.469 HYPERVISOR: exec_cmd: vm set_disk0 R2 0 
+Dec 09 22:00:31.503 HYPERVISOR: exec_cmd: vm set_exec_area R2 64 
+Dec 09 22:00:31.535 HYPERVISOR: exec_cmd: vm set_config R2 configs/i15_startup-config.cfg 
+Dec 09 22:00:35.041 HYPERVISOR: exec_cmd: nio create_udp udp-b5eafdfb-b3ad-4bbb-966c-aa8b1e9821bf 10006 127.0.0.1 10007 
+Dec 09 22:00:35.074 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R2 0 0 udp-b5eafdfb-b3ad-4bbb-966c-aa8b1e9821bf 
+Dec 09 22:00:35.108 HYPERVISOR: exec_cmd: vm get_status R2 
+Dec 09 22:00:35.568 HYPERVISOR: exec_cmd: nio create_udp udp-02e68e7d-10a7-4e33-9f0f-ba962c4479b9 10017 127.0.0.1 10016 
+Dec 09 22:00:35.615 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R2 0 1 udp-02e68e7d-10a7-4e33-9f0f-ba962c4479b9 
+Dec 09 22:00:35.649 HYPERVISOR: exec_cmd: vm get_status R2 
+Dec 09 22:04:26.824 HYPERVISOR: exec_cmd: vm extract_config R2 
+Dec 09 22:04:27.318 HYPERVISOR: exec_cmd: vm get_status R2 
+Dec 09 22:04:27.471 HYPERVISOR: exec_cmd: vm extract_config R2 
+Dec 09 22:04:27.630 HYPERVISOR: exec_cmd: vm delete R2 
+Dec 09 22:04:27.631 VM: VM R2 destroyed.
+Dec 09 22:04:27.798 HYPERVISOR: exec_cmd: hypervisor stop 
+Dec 09 22:04:28.031 HYPERVISOR: Stopped.
+Dec 09 22:04:28.031 GENERAL: reset done.

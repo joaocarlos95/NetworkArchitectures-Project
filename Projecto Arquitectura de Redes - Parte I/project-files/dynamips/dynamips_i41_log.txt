@@ -1,0 +1,27 @@
+Dec 06 18:59:29.853 HYPERVISOR: Release 0.2.16-amd64/Darwin (tag 2015060118)
+Dec 06 18:59:29.854 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 49898.
+Dec 06 18:59:29.920 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 06 18:59:29.935 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/MarianaCruz/Downloads/Projecto Arquitectura de Redes/project-files/dynamips 
+Dec 06 18:59:29.935 GENERAL: working_dir=/Users/MarianaCruz/Downloads/Projecto Arquitectura de Redes/project-files/dynamips
+Dec 06 18:59:29.956 HYPERVISOR: exec_cmd: vm create PC1 7 c3725 
+Dec 06 18:59:29.956 VM: VM PC1 created.
+Dec 06 18:59:29.967 HYPERVISOR: exec_cmd: vm set_con_tcp_port PC1 5007 
+Dec 06 18:59:29.983 HYPERVISOR: exec_cmd: c3725 get_mac_addr PC1 
+Dec 06 18:59:30.006 HYPERVISOR: exec_cmd: vm set_nvram PC1 256 
+Dec 06 18:59:30.014 HYPERVISOR: exec_cmd: vm set_ios PC1 /Users/MarianaCruz/GNS3/images/IOS/IOS/c3725-advipservicesk9-mz.124-21.image 
+Dec 06 18:59:30.021 HYPERVISOR: exec_cmd: c3725 set_mac_addr PC1 c207.22ec.0000 
+Dec 06 18:59:30.034 HYPERVISOR: exec_cmd: vm set_disk0 PC1 0 
+Dec 06 18:59:30.056 HYPERVISOR: exec_cmd: vm get_status PC1 
+Dec 06 18:59:30.063 HYPERVISOR: exec_cmd: vm set_idle_pc PC1 0x60a68e70 
+Dec 06 18:59:30.068 HYPERVISOR: exec_cmd: vm set_config PC1 configs/i7_startup-config.cfg 
+Dec 06 18:59:30.898 HYPERVISOR: exec_cmd: nio create_udp udp-224de3bf-9da6-45ff-935e-b17038787e7b 10022 127.0.0.1 10023 
+Dec 06 18:59:30.903 HYPERVISOR: exec_cmd: vm slot_add_nio_binding PC1 0 0 udp-224de3bf-9da6-45ff-935e-b17038787e7b 
+Dec 06 18:59:30.912 HYPERVISOR: exec_cmd: vm get_status PC1 
+Dec 06 20:07:59.024 HYPERVISOR: exec_cmd: vm extract_config PC1 
+Dec 06 20:08:14.468 HYPERVISOR: exec_cmd: vm get_status PC1 
+Dec 06 20:08:14.492 HYPERVISOR: exec_cmd: vm extract_config PC1 
+Dec 06 20:08:14.537 HYPERVISOR: exec_cmd: vm delete PC1 
+Dec 06 20:08:14.557 VM: VM PC1 destroyed.
+Dec 06 20:08:14.588 HYPERVISOR: exec_cmd: hypervisor stop 
+Dec 06 20:08:14.812 HYPERVISOR: Stopped.
+Dec 06 20:08:14.812 GENERAL: reset done.

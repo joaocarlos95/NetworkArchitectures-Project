@@ -1,0 +1,22 @@
+Nov 25 17:46:58.408 HYPERVISOR: Release 0.2.16-amd64/Darwin (tag 2015060118)
+Nov 25 17:46:58.408 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 50298.
+Nov 25 17:46:58.481 HYPERVISOR: exec_cmd: hypervisor version 
+Nov 25 17:46:58.506 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/MarianaCruz/Desktop/proj1VLANSCHECK/project-files/dynamips 
+Nov 25 17:46:58.506 GENERAL: working_dir=/Users/MarianaCruz/Desktop/proj1VLANSCHECK/project-files/dynamips
+Nov 25 17:46:58.519 HYPERVISOR: exec_cmd: ethsw create SW2 
+Nov 25 17:46:59.219 HYPERVISOR: exec_cmd: nio create_udp udp-d76f1b4d-eb3f-4245-93bb-8ec60d626a75 10025 127.0.0.1 10024 
+Nov 25 17:46:59.235 HYPERVISOR: exec_cmd: ethsw add_nio SW2 udp-d76f1b4d-eb3f-4245-93bb-8ec60d626a75 
+Nov 25 17:46:59.267 HYPERVISOR: exec_cmd: ethsw set_access_port SW2 udp-d76f1b4d-eb3f-4245-93bb-8ec60d626a75 1 
+Nov 25 17:46:59.284 HYPERVISOR: exec_cmd: nio create_udp udp-10219999-88fe-424a-9d1a-2bc392b19c13 10027 127.0.0.1 10026 
+Nov 25 17:46:59.289 HYPERVISOR: exec_cmd: ethsw add_nio SW2 udp-10219999-88fe-424a-9d1a-2bc392b19c13 
+Nov 25 17:46:59.301 HYPERVISOR: exec_cmd: ethsw set_access_port SW2 udp-10219999-88fe-424a-9d1a-2bc392b19c13 1 
+Nov 25 17:46:59.319 HYPERVISOR: exec_cmd: nio create_udp udp-2c3e2a7b-2a7b-48fd-a256-08a95fcfc697 10029 127.0.0.1 10028 
+Nov 25 17:46:59.330 HYPERVISOR: exec_cmd: ethsw add_nio SW2 udp-2c3e2a7b-2a7b-48fd-a256-08a95fcfc697 
+Nov 25 17:46:59.348 HYPERVISOR: exec_cmd: ethsw set_access_port SW2 udp-2c3e2a7b-2a7b-48fd-a256-08a95fcfc697 1 
+Nov 25 17:46:59.428 HYPERVISOR: exec_cmd: nio create_udp udp-cefc665a-56af-4982-a7af-8d5326b4ba9a 10031 127.0.0.1 10030 
+Nov 25 17:46:59.440 HYPERVISOR: exec_cmd: ethsw add_nio SW2 udp-cefc665a-56af-4982-a7af-8d5326b4ba9a 
+Nov 25 17:46:59.460 HYPERVISOR: exec_cmd: ethsw set_access_port SW2 udp-cefc665a-56af-4982-a7af-8d5326b4ba9a 1 
+Nov 25 18:06:03.438 HYPERVISOR: exec_cmd: ethsw delete SW2 
+Nov 25 18:06:03.539 HYPERVISOR: exec_cmd: hypervisor stop 
+Nov 25 18:06:03.977 HYPERVISOR: Stopped.
+Nov 25 18:06:03.977 GENERAL: reset done.

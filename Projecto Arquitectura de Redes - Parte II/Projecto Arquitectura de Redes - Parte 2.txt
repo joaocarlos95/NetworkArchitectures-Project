@@ -1,0 +1,531 @@
+
+COMANDOS
+
+-----------------------------------------------------
+PC1
+
+configure terminal
+no ip routing
+ip default-gateway 201.11.4.67
+interface fastEthernet 0/0
+ip address 201.11.4.65 255.255.255.240
+no shutdown
+end
+write
+
+-----------------------------------------------------
+PC3
+
+configure terminal
+no ip routing
+ipv6 default-gateway 2001:db8:11:1014:14c3::14
+interface fastEthernet 0/0
+ipv6 address 2001:db8:11:1014:14c3::c3/80
+no shutdown
+end
+write
+
+-----------------------------------------------------
+PC4
+
+configure terminal
+no ip routing
+ipv6 default-gateway 2001:db8:11:1317:17c4::17
+interface fastEthernet 0/0
+ipv6 address 2001:db8:11:1317:17c4::c4/80
+no shutdown
+end
+write
+
+-----------------------------------------------------
+PC5
+
+configure terminal
+no ip routing
+ipv6 default-gateway 2001:db8:11:1112:56c5::16
+interface fastEthernet 0/0
+ipv6 address 2001:db8:11:1112:56c5::c5/80
+no shutdown
+end
+write
+
+-----------------------------------------------------
+PC6
+
+configure terminal
+no ip routing
+ip default-gateway 201.11.2.69
+interface fastEthernet 0/0
+ip address 201.11.2.71 255.255.255.240
+no shutdown
+end
+write
+
+-----------------------------------------------------
+PC7
+
+configure terminal
+no ip routing
+ip default-gateway 201.11.2.70
+interface fastEthernet 0/0
+ip address 201.11.2.72 255.255.255.240
+no shutdown
+end
+write
+
+-----------------------------------------------------
+R1
+
+configure terminal
+ipv6 unicast-routing
+ipv6 router ospf 1
+router-id 1.1.1.1
+exit
+interface fastEthernet 0/0
+ip address 201.11.4.129 255.255.255.240
+no shutdown
+interface fastEthernet 0/1
+ip address 201.11.4.193 255.255.255.240
+no shutdown
+interface serial 1/0
+ipv6 ospf 1 area 0
+ipv6 address 2001:db8:11:104::1/64
+encapsulation ppp
+no shutdown
+interface tunnel 15
+ip address 10.0.10.65 255.255.255.192
+tunnel source Serial 1/0
+tunnel destination 2001:db8:11:4056::5
+tunnel mode gre ipv6
+interface tunnel 16
+ip address 10.0.10.129 255.255.255.192
+tunnel source Serial 1/0
+tunnel destination 2001:db8:11:4056::6
+tunnel mode gre ipv6
+exit
+ip route 201.11.2.71 255.255.255.255 tunnel 15 10.0.10.69
+ip route 201.11.2.72 255.255.255.255 tunnel 16 10.0.10.134
+router ospf 1
+router-id 1.1.1.1
+network 201.11.4.128 0.0.0.15 area 0
+network 201.11.4.192 0.0.0.15 area 0
+end
+write
+
+-----------------------------------------------------
+R2
+
+configure terminal
+interface fastEthernet 0/0
+ip address 201.11.4.194 255.255.255.240
+no shutdown
+interface fastEthernet 0/1
+ip address 201.11.4.162 255.255.255.240
+no shutdown
+exit
+ip route 201.11.2.64 255.255.255.240 201.11.4.129
+router ospf 1
+router-id 2.2.2.2
+network 201.11.4.160 0.0.0.15 area 0
+network 201.11.4.192 0.0.0.15 area 0
+end
+write
+
+-----------------------------------------------------
+R3
+
+configure terminal
+interface fastEthernet 0/0
+ip address 201.11.4.131 255.255.255.240
+no shutdown
+interface fastEthernet 0/1
+ip address 201.11.4.163 255.255.255.240
+no shutdown
+interface fastEthernet 1/0
+ip address 201.11.4.67 255.255.255.240
+no shutdown
+exit
+router ospf 1
+router-id 3.3.3.3
+network 201.11.4.64 0.0.0.15 area 0
+network 201.11.4.128 0.0.0.15 area 0
+network 201.11.4.160 0.0.0.15 area 0
+end
+write
+
+-----------------------------------------------------
+R4
+
+configure terminal
+ipv6 unicast-routing
+ipv6 router ospf 1
+router-id 4.4.4.4
+exit
+interface fastEthernet 0/0
+ipv6 ospf 1 area 2
+ipv6 address 2001:db8:11:409::4/64
+no shutdown
+interface fastEthernet 0/1
+ipv6 ospf 1 area 0
+ipv6 address 2001:db8:11:4056::4/64
+no shutdown
+interface fastEthernet 2/0
+ipv6 ospf 1 area 1
+ipv6 address 2001:db8:11:4078::4/64
+no shutdown
+interface serial 1/0
+ipv6 ospf 1 area 0
+ipv6 address 2001:db8:11:104::4/64
+encapsulation ppp
+no shutdown
+end
+write
+
+-----------------------------------------------------
+R5
+
+configure terminal
+ipv6 unicast-routing
+ipv6 router ospf 1
+router-id 5.5.5.5
+exit
+interface fastEthernet 0/0
+ipv6 ospf 1 area 0
+ipv6 address 2001:db8:11:4056::5/64
+no shutdown
+interface fastEthernet 0/1
+ip address 201.11.2.69 255.255.255.240
+no shutdown
+interface tunnel 15
+ip address 10.0.10.69 255.255.255.192
+tunnel source fastEthernet 0/0
+tunnel destination 2001:db8:11:104::1
+tunnel mode gre ipv6
+interface tunnel 56
+exit
+ip route 201.11.4.65 255.255.255.255 tunnel 15 10.0.10.65
+end
+write
+
+-----------------------------------------------------
+R6
+
+configure terminal
+ipv6 unicast-routing
+ipv6 router ospf 1
+router-id 6.6.6.6
+exit
+interface fastEthernet 0/0
+ipv6 ospf 1 area 0
+ipv6 address 2001:db8:11:4056::6/64
+no shutdown
+interface fastEthernet 0/1
+ip address 201.11.2.70 255.255.255.240
+no shutdown
+interface tunnel 16
+ip address 10.0.10.134 255.255.255.192
+tunnel source fastEthernet 0/0
+tunnel destination 2001:db8:11:104::1
+tunnel mode gre ipv6
+exit
+ip route 201.11.4.65 255.255.255.255 tunnel 16 10.0.10.129
+end
+write
+
+-----------------------------------------------------
+R7
+
+configure terminal
+ipv6 unicast-routing
+ipv6 router ospf 1
+router-id 7.7.7.7
+exit
+interface fastEthernet 0/0
+ipv6 address 2001:db8:11:4078::7/64
+ipv6 ospf 1 area 1
+no shutdown
+end
+write
+
+-----------------------------------------------------
+R8
+
+configure terminal
+ipv6 unicast-routing
+ipv6 router ospf 1
+router-id 8.8.8.8
+exit
+interface fastEthernet 0/0
+ipv6 address 2001:db8:11:4078::8/64
+ipv6 ospf 1 area 1
+no shutdown
+end
+write
+
+-----------------------------------------------------
+R9
+
+configure terminal
+ipv6 unicast-routing
+ipv6 router ospf 1
+router-id 9.9.9.9
+redistribute bgp 10
+exit
+interface fastEthernet 0/0
+ipv6 address 2001:db8:11:409::9/64
+ipv6 ospf 1 area 2
+no shutdown
+interface fastEthernet 0/1
+ipv6 address 2001:db8:11:913::9/64
+no shutdown
+interface fastEthernet 1/0
+ipv6 address 2001:db8:11:910::9/64
+no shutdown
+router bgp 10
+bgp router-id 9.9.9.9
+no bgp default ipv4-unicast
+bgp log-neighbor-changes
+neighbor 2001:DB8:11:910::10 remote-as 20
+neighbor 2001:DB8:11:910::10 update-source f1/0
+neighbor 2001:DB8:11:913::13 remote-as 40
+neighbor 2001:DB8:11:913::13 update-source f0/1
+address-family ipv6
+neighbor 2001:DB8:11:910::10 activate
+neighbor 2001:DB8:11:913::13 activate
+redistribute connected
+redistribute ospf 1 match internal external 1 external 2
+end
+write
+
+-----------------------------------------------------
+R10
+
+configure terminal
+ipv6 unicast-routing
+ipv6 router ospf 2
+router-id 10.10.10.10
+redistribute bgp 20
+exit
+interface fastEthernet 0/0
+ipv6 address 2001:db8:11:1014:1014::10/80
+ipv6 ospf 2 area 0
+no shutdown
+interface fastEthernet 0/1
+ipv6 address 2001:db8:11:1011::10/64
+no shutdown
+interface fastEthernet 1/0
+ipv6 address 2001:db8:11:910::10/64
+no shutdown
+router bgp 20
+bgp router-id 10.10.10.10
+no bgp default ipv4-unicast
+bgp log-neighbor-changes
+neighbor 2001:DB8:11:910::9 remote-as 10
+neighbor 2001:DB8:11:910::9 update-source f1/0
+neighbor 2001:DB8:11:1011::11 remote-as 30
+neighbor 2001:DB8:11:1011::11 update-source f0/1
+address-family ipv6
+aggregate-address 2001:db8:11:1014::/64 summary-only
+neighbor 2001:DB8:11:910::9 activate
+neighbor 2001:DB8:11:1011::11 activate
+redistribute connected
+redistribute ospf 2 match internal external 1 external 2
+end
+write
+
+-----------------------------------------------------
+R11
+
+configure terminal
+ipv6 unicast-routing
+ipv6 router ospf 3
+router-id 11.11.11.11
+redistribute bgp 30
+exit
+interface fastEthernet 0/0
+ipv6 address 2001:db8:11:1112:1112::11/80
+ipv6 ospf 3 area 0
+no shutdown
+interface fastEthernet 0/1
+ipv6 address 2001:db8:11:1011::11/64
+no shutdown
+interface fastEthernet 1/0
+ipv6 address 2001:db8:11:1112:1115::11/80
+ipv6 ospf 3 area 0
+no shutdown
+router bgp 30
+bgp router-id 11.11.11.11
+no bgp default ipv4-unicast
+bgp log-neighbor-changes
+neighbor 2001:DB8:11:1011::10 remote-as 20
+neighbor 2001:DB8:11:1011::10 update-source f0/1
+neighbor 2001:DB8:11:1112:1112::12 remote-as 30
+neighbor 2001:DB8:11:1112:1112::12 update-source f0/0
+address-family ipv6
+aggregate-address 2001:db8:11:1112::/64 summary-only
+neighbor 2001:DB8:11:1011::10 activate
+neighbor 2001:DB8:11:1112:1112::12 activate 
+neighbor 2001:DB8:11:1112:1112::12 next-hop-self
+bgp default local-preference 200
+redistribute connected
+redistribute ospf 3 match internal external 1 external 2
+end
+write
+
+-----------------------------------------------------
+R12
+
+configure terminal
+ipv6 unicast-routing
+ipv6 router ospf 3
+router-id 12.12.12.12
+redistribute bgp 30
+exit
+interface fastEthernet 0/0
+ipv6 address 2001:db8:11:1112:1112::12/80
+ipv6 ospf 3 area 0
+no shutdown
+interface fastEthernet 0/1
+ipv6 address 2001:db8:11:1112:1216::12/80
+ipv6 ospf 3 area 0
+no shutdown
+interface fastEthernet 1/0
+ipv6 address 2001:db8:11:1213::12/64
+no shutdown
+router bgp 30
+bgp router-id 12.12.12.12
+no bgp default ipv4-unicast
+bgp log-neighbor-changes
+neighbor 2001:DB8:11:1213::13 remote-as 40
+neighbor 2001:DB8:11:1213::13 update-source f1/0
+neighbor 2001:DB8:11:1112:1112::11 remote-as 30
+neighbor 2001:DB8:11:1112:1112::11 update-source f0/0
+address-family ipv6
+aggregate-address 2001:db8:11:1112::/64 summary-only
+neighbor 2001:DB8:11:1213::13 activate
+neighbor 2001:DB8:11:1112:1112::11 activate 
+neighbor 2001:DB8:11:1112:1112::11 next-hop-self
+redistribute connected
+redistribute ospf 3 match internal external 1 external 2
+end
+write
+
+-----------------------------------------------------
+R13
+
+configure terminal
+ipv6 unicast-routing
+ipv6 router ospf 4
+router-id 13.13.13.13
+redistribute bgp 40
+exit
+interface fastEthernet 0/0
+ipv6 address 2001:db8:11:1317:1317::13/80
+ipv6 ospf 4 area 0
+no shutdown
+interface fastEthernet 0/1
+ipv6 address 2001:db8:11:913::13/64
+no shutdown
+interface fastEthernet 1/0
+ipv6 address 2001:db8:11:1213::13/64
+no shutdown
+router bgp 40
+bgp router-id 13.13.13.13
+no bgp default ipv4-unicast
+bgp log-neighbor-changes
+neighbor 2001:DB8:11:913::9 remote-as 10
+neighbor 2001:DB8:11:913::9 update-source f0/1
+neighbor 2001:DB8:11:1213::12 remote-as 30
+neighbor 2001:DB8:11:1213::12 update-source f1/0
+address-family ipv6
+aggregate-address 2001:db8:11:1317::/64 summary-only
+neighbor 2001:DB8:11:913::9 activate
+neighbor 2001:DB8:11:1213::12 activate
+redistribute connected
+redistribute ospf 4 match internal external 1 external 2
+end
+write
+
+-----------------------------------------------------
+R14
+
+configure terminal
+ipv6 unicast-routing
+ipv6 router ospf 2
+router-id 14.14.14.14
+exit
+interface fastEthernet 0/0
+ipv6 address 2001:db8:11:1014:1014::14/80
+ipv6 ospf 2 area 0
+no shutdown
+interface fastEthernet 0/1
+ipv6 address 2001:db8:11:1014:14c3::14/80
+ipv6 ospf 2 area 0
+no shutdown
+end
+write
+
+-----------------------------------------------------
+R15
+
+configure terminal
+ipv6 unicast-routing
+ipv6 router ospf 3
+router-id 15.15.15.15
+exit
+interface fastEthernet 0/0
+ipv6 address 2001:db8:11:1112:1115::15/80
+ipv6 ospf 3 area 0
+no shutdown
+interface fastEthernet 0/1
+ipv6 address 2001:db8:11:1112:1516::15/80
+ipv6 ospf 3 area 0
+no shutdown
+interface fastEthernet 1/0
+ipv6 address 2001:db8:11:1112:56c5::15/80
+ipv6 ospf 3 area 0
+no shutdown
+end
+write
+
+-----------------------------------------------------
+R16
+
+configure terminal
+ipv6 unicast-routing
+ipv6 router ospf 3
+router-id 16.16.16.16
+exit
+interface fastEthernet 0/0
+ipv6 address 2001:db8:11:1112:1216::16/80
+ipv6 ospf 3 area 0
+no shutdown
+interface fastEthernet 0/1
+ipv6 address 2001:db8:11:1112:1516::16/80
+ipv6 ospf 3 area 0
+no shutdown
+interface fastEthernet 1/0
+ipv6 address 2001:db8:11:1112:56c5::16/80
+ipv6 ospf 3 area 0
+no shutdown
+end
+write
+
+-----------------------------------------------------
+R17
+
+configure terminal
+ipv6 unicast-routing
+ipv6 router ospf 4
+router-id 17.17.17.17
+exit
+interface fastEthernet 0/0
+ipv6 address 2001:db8:11:1317:1317::17/80
+ipv6 ospf 4 area 0
+no shutdown
+interface fastEthernet 0/1
+ipv6 address 2001:db8:11:1317:17c4::17/80
+ipv6 ospf 4 area 0
+no shutdown
+end
+write

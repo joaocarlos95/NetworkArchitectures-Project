@@ -1,0 +1,56 @@
+Dec 11 13:43:43.513 HYPERVISOR: Release 0.2.16-amd64/Darwin (tag 2015060118)
+Dec 11 13:43:43.513 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 52700.
+Dec 11 13:43:43.647 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 11 13:43:43.662 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/MarianaCruz/Downloads/Projecto Arquitectura de Redes/project-files/dynamips 
+Dec 11 13:43:43.662 GENERAL: working_dir=/Users/MarianaCruz/Downloads/Projecto Arquitectura de Redes/project-files/dynamips
+Dec 11 13:43:43.674 HYPERVISOR: exec_cmd: vm create R5 18 c3725 
+Dec 11 13:43:43.674 VM: VM R5 created.
+Dec 11 13:43:43.682 HYPERVISOR: exec_cmd: vm set_con_tcp_port R5 5004 
+Dec 11 13:43:43.692 HYPERVISOR: exec_cmd: c3725 get_mac_addr R5 
+Dec 11 13:43:43.704 HYPERVISOR: exec_cmd: vm set_disk0 R5 0 
+Dec 11 13:43:43.715 HYPERVISOR: exec_cmd: c3725 set_mac_addr R5 c212.210c.0000 
+Dec 11 13:43:43.719 HYPERVISOR: exec_cmd: vm get_status R5 
+Dec 11 13:43:43.721 HYPERVISOR: exec_cmd: vm set_idle_pc R5 0x60a68e70 
+Dec 11 13:43:43.723 HYPERVISOR: exec_cmd: vm set_nvram R5 256 
+Dec 11 13:43:43.726 HYPERVISOR: exec_cmd: vm set_ios R5 /Users/MarianaCruz/GNS3/images/IOS/IOS/c3725-advipservicesk9-mz.124-21.image 
+Dec 11 13:43:43.728 HYPERVISOR: exec_cmd: vm set_config R5 configs/i18_startup-config.cfg 
+Dec 11 13:43:44.363 HYPERVISOR: exec_cmd: nio create_udp udp-1c60ff03-0568-4892-9203-f2b413159e3d 10035 127.0.0.1 10034 
+Dec 11 13:43:44.385 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R5 0 0 udp-1c60ff03-0568-4892-9203-f2b413159e3d 
+Dec 11 13:43:44.419 HYPERVISOR: exec_cmd: vm get_status R5 
+Dec 11 13:43:44.451 HYPERVISOR: exec_cmd: nio create_udp udp-6a01e5ac-e80e-48a4-ba42-8c4e281f08ef 10036 127.0.0.1 10037 
+Dec 11 13:43:44.468 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R5 0 1 udp-6a01e5ac-e80e-48a4-ba42-8c4e281f08ef 
+Dec 11 13:43:44.473 HYPERVISOR: exec_cmd: vm get_status R5 
+Dec 11 13:43:48.029 HYPERVISOR: exec_cmd: vm create Ghost 0 c3725 
+Dec 11 13:43:48.029 VM: VM Ghost created.
+Dec 11 13:43:48.043 HYPERVISOR: exec_cmd: vm set_ios Ghost /Users/MarianaCruz/GNS3/images/IOS/IOS/c3725-advipservicesk9-mz.124-21.image 
+Dec 11 13:43:48.047 HYPERVISOR: exec_cmd: vm set_ghost_status Ghost 1 
+Dec 11 13:43:48.052 HYPERVISOR: exec_cmd: vm set_ghost_file Ghost c3725-advipservicesk9-mz.124-21.image-128.ghost 
+Dec 11 13:43:48.061 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Dec 11 13:43:48.091 HYPERVISOR: exec_cmd: vm start Ghost 
+Dec 11 13:43:49.162 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Dec 11 13:43:49.164 HYPERVISOR: exec_cmd: vm stop Ghost 
+Dec 11 13:43:51.440 VM: VM Ghost shutdown.
+Dec 11 13:43:51.444 HYPERVISOR: exec_cmd: vm clean_delete Ghost 
+Dec 11 13:43:51.444 VM: VM Ghost destroyed.
+Dec 11 13:43:53.863 HYPERVISOR: exec_cmd: vm set_ghost_status R5 2 
+Dec 11 13:43:53.865 HYPERVISOR: exec_cmd: vm set_ghost_file R5 c3725-advipservicesk9-mz.124-21.image-128.ghost 
+Dec 11 13:43:53.868 HYPERVISOR: exec_cmd: vm get_status R5 
+Dec 11 13:43:53.870 HYPERVISOR: exec_cmd: vm start R5 
+Dec 11 17:46:53.653 HYPERVISOR: exec_cmd: vm get_status R5 
+Dec 11 17:46:54.620 HYPERVISOR: exec_cmd: vm stop R5 
+Dec 11 17:47:00.842 VM: VM R5 shutdown.
+Dec 11 17:47:02.110 HYPERVISOR: exec_cmd: vm extract_config R5 
+Dec 11 17:53:51.786 HYPERVISOR: exec_cmd: vm get_status R5 
+Dec 11 17:53:51.838 HYPERVISOR: exec_cmd: vm start R5 
+Dec 11 18:02:53.291 HYPERVISOR: exec_cmd: vm get_status R5 
+Dec 11 18:02:53.342 HYPERVISOR: exec_cmd: vm stop R5 
+Dec 11 18:02:53.525 VM: VM R5 shutdown.
+Dec 11 18:02:53.534 HYPERVISOR: exec_cmd: vm extract_config R5 
+Dec 11 18:03:22.790 HYPERVISOR: exec_cmd: vm extract_config R5 
+Dec 11 18:03:23.285 HYPERVISOR: exec_cmd: vm get_status R5 
+Dec 11 18:03:23.312 HYPERVISOR: exec_cmd: vm extract_config R5 
+Dec 11 18:03:23.330 HYPERVISOR: exec_cmd: vm delete R5 
+Dec 11 18:03:23.352 VM: VM R5 destroyed.
+Dec 11 18:03:23.459 HYPERVISOR: exec_cmd: hypervisor stop 
+Dec 11 18:03:23.555 HYPERVISOR: Stopped.
+Dec 11 18:03:23.555 GENERAL: reset done.

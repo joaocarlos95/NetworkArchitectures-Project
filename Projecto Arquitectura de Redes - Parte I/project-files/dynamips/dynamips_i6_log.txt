@@ -1,0 +1,26 @@
+Dec 06 17:11:20.467 HYPERVISOR: Release 0.2.16-amd64/Darwin (tag 2015060118)
+Dec 06 17:11:20.467 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 49565.
+Dec 06 17:11:20.566 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 06 17:11:20.574 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/MarianaCruz/Downloads/Projecto Arquitectura de Redes/project-files/dynamips 
+Dec 06 17:11:20.574 GENERAL: working_dir=/Users/MarianaCruz/Downloads/Projecto Arquitectura de Redes/project-files/dynamips
+Dec 06 17:11:20.578 HYPERVISOR: exec_cmd: vm create PC7 12 c3725 
+Dec 06 17:11:20.578 VM: VM PC7 created.
+Dec 06 17:11:20.582 HYPERVISOR: exec_cmd: vm set_con_tcp_port PC7 5012 
+Dec 06 17:11:20.590 HYPERVISOR: exec_cmd: c3725 get_mac_addr PC7 
+Dec 06 17:11:20.595 HYPERVISOR: exec_cmd: vm set_disk0 PC7 0 
+Dec 06 17:11:20.600 HYPERVISOR: exec_cmd: c3725 set_mac_addr PC7 c20c.1344.0000 
+Dec 06 17:11:20.607 HYPERVISOR: exec_cmd: vm get_status PC7 
+Dec 06 17:11:20.624 HYPERVISOR: exec_cmd: vm set_idle_pc PC7 0x60a68e70 
+Dec 06 17:11:20.643 HYPERVISOR: exec_cmd: vm set_nvram PC7 256 
+Dec 06 17:11:20.649 HYPERVISOR: exec_cmd: vm set_ios PC7 /Users/MarianaCruz/GNS3/images/IOS/c3725-advipservicesk9-mz.124-21.image 
+Dec 06 17:11:20.659 HYPERVISOR: exec_cmd: vm set_config PC7 configs/i12_startup-config.cfg 
+Dec 06 17:11:21.568 HYPERVISOR: exec_cmd: nio create_udp udp-4cbf3ada-e68e-411b-81a9-4c4154b486a5 10030 127.0.0.1 10031 
+Dec 06 17:11:21.588 HYPERVISOR: exec_cmd: vm slot_add_nio_binding PC7 0 0 udp-4cbf3ada-e68e-411b-81a9-4c4154b486a5 
+Dec 06 17:11:21.609 HYPERVISOR: exec_cmd: vm get_status PC7 
+Dec 06 17:11:31.537 HYPERVISOR: exec_cmd: vm get_status PC7 
+Dec 06 17:11:31.558 HYPERVISOR: exec_cmd: vm extract_config PC7 
+Dec 06 17:11:31.567 HYPERVISOR: exec_cmd: vm delete PC7 
+Dec 06 17:11:31.603 VM: VM PC7 destroyed.
+Dec 06 17:11:31.670 HYPERVISOR: exec_cmd: hypervisor stop 
+Dec 06 17:11:32.085 HYPERVISOR: Stopped.
+Dec 06 17:11:32.085 GENERAL: reset done.

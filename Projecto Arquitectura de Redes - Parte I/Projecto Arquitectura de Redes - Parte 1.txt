@@ -1,0 +1,413 @@
+
+COMANDOS
+
+-----------------------------------------------------
+PC1
+
+configure terminal
+no ip routing
+ip domain lookup
+ip name-server 201.11.1.69
+interface fastEthernet 0/0
+ip address 201.11.4.65 255.255.255.240
+ipv6 enable
+ipv6 address autoconfig
+no shutdown
+end
+write
+
+-----------------------------------------------------
+PC2
+
+ip dhcp
+
+-----------------------------------------------------
+PC3
+
+ip dhcp
+
+-----------------------------------------------------
+PC4
+ 
+ip dhcp
+
+-----------------------------------------------------
+PC5
+
+ip dhcp
+
+-----------------------------------------------------
+PC6
+
+configure terminal
+no ip routing
+ip domain lookup
+ip name-server 201.11.1.69
+interface fastEthernet 0/0
+ip address 201.11.2.72 255.255.255.240
+ipv6 enable
+ipv6 address autoconfig
+no shutdown
+end
+write
+
+-----------------------------------------------------
+PC7
+
+configure terminal
+no ip routing
+ip domain lookup
+ip name-server 201.11.1.69
+interface fastEthernet 0/0
+ip address 201.11.2.71 255.255.255.240
+ipv6 enable
+ipv6 address autoconfig
+no shutdown
+end
+write
+
+-----------------------------------------------------
+R1
+
+configure terminal
+ipv6 unicast-routing
+ipv6 router ospf 2
+router-id 1.1.1.1
+exit
+interface fastEthernet 0/0
+ipv6 ospf 2 area 4
+ip address 201.11.4.129 255.255.255.240
+ipv6 address 2001:db8:11:103::1/64
+no shutdown
+interface fastEthernet 0/1
+ipv6 ospf 2 area 4
+ip address 201.11.4.193 255.255.255.240
+ipv6 address 2001:db8:11:102::1/64
+no shutdown
+interface serial 1/0
+ipv6 ospf 2 area 0
+ip address 201.11.0.129 255.255.255.240
+ipv6 address 2001:db8:11:104::1/64
+encapsulation ppp
+no shutdown
+exit
+router ospf 1
+router-id 1.1.1.1
+network 201.11.0.128 0.0.0.15 area 0
+network 201.11.4.128 0.0.0.15 area 4
+network 201.11.4.192 0.0.0.15 area 4
+end
+write
+
+-----------------------------------------------------
+R2
+
+configure terminal
+ipv6 unicast-routing
+ipv6 router ospf 2
+router-id 2.2.2.2
+exit
+interface fastEthernet 0/0
+ipv6 ospf 2 area 4
+ip address 201.11.4.194 255.255.255.240
+ipv6 address 2001:db8:11:102::2/64
+no shutdown
+interface fastEthernet 0/1
+ipv6 ospf 2 area 4
+ip address 201.11.4.162 255.255.255.240
+ipv6 address 2001:db8:11:203::2/64
+no shutdown
+interface serial 1/0
+ipv6 ospf 2 area 0
+ip address 201.11.0.66 255.255.255.240
+ipv6 address 2001:db8:11:207::2/64
+encapsulation ppp
+no shutdown
+exit
+router ospf 1
+router-id 2.2.2.2
+network 201.11.0.64 0.0.0.15 area 0
+network 201.11.4.160 0.0.0.15 area 4
+network 201.11.4.192 0.0.0.15 area 4
+end
+write
+
+-----------------------------------------------------
+R3
+
+configure terminal
+ipv6 unicast-routing
+ipv6 router ospf 2
+router-id 3.3.3.3
+exit
+interface fastEthernet 0/0
+ipv6 ospf 2 area 4
+ip address 201.11.4.131 255.255.255.240
+ipv6 address 2001:db8:11:103::3/64
+no shutdown
+interface fastEthernet 0/1
+ipv6 ospf 2 area 4
+ip address 201.11.4.163 255.255.255.240
+ipv6 address 2001:db8:11:203::3/64
+no shutdown
+interface fastEthernet 1/0
+ipv6 ospf 2 area 4
+ip address 201.11.4.67 255.255.255.240
+ipv6 address 2001:db8:11:c103::3/64
+no shutdown
+exit
+router ospf 1
+router-id 3.3.3.3
+network 201.11.4.64 0.0.0.15 area 4
+network 201.11.4.128 0.0.0.15 area 4
+network 201.11.4.160 0.0.0.15 area 4
+end
+write
+
+-----------------------------------------------------
+R4
+
+configure terminal
+ipv6 unicast-routing
+ipv6 router ospf 2
+router-id 4.4.4.4
+exit
+interface fastEthernet 0/0
+ipv6 ospf 2 area 1
+ip address 201.11.1.68 255.255.255.240
+ipv6 address 2001:db8:11:40d::4/64
+no shutdown
+interface fastEthernet 0/1
+ipv6 ospf 2 area 0
+ip address 201.11.0.196 255.255.255.240
+ipv6 address 2001:db8:11:4056::4/64
+no shutdown
+interface serial 1/0
+ipv6 ospf 2 area 0
+ip address 201.11.0.132 255.255.255.240
+ipv6 address 2001:db8:11:104::4/64
+encapsulation ppp
+no shutdown
+exit
+router ospf 1
+router-id 4.4.4.4
+network 201.11.0.128 0.0.0.15 area 0
+network 201.11.0.192 0.0.0.15 area 0
+network 201.11.0.64 0.0.0.15 area 1
+end
+write
+
+-----------------------------------------------------
+R5
+
+configure terminal
+ipv6 unicast-routing
+ipv6 router ospf 2
+router-id 5.5.5.5
+exit
+interface fastEthernet 0/0
+ipv6 ospf 2 area 0
+ip address 201.11.0.197 255.255.255.240
+ipv6 address 2001:db8:11:4056::5/64
+no shutdown
+interface fastEthernet 0/1
+ipv6 ospf 2 area 2
+ip address 201.11.2.69 255.255.255.240
+ipv6 address 2001:db8:11:5c67::5/64
+no shutdown
+exit
+router ospf 1
+router-id 5.5.5.5
+network 201.11.0.192 0.0.0.15 area 0
+network 201.11.2.64 0.0.0.15 area 2
+end
+write
+
+-----------------------------------------------------
+R6
+
+configure terminal
+ipv6 unicast-routing
+ipv6 router ospf 2
+router-id 6.6.6.6
+exit
+interface fastEthernet 0/0
+ipv6 ospf 2 area 0
+ip address 201.11.0.198 255.255.255.240
+ipv6 address 2001:db8:11:4056::6/64
+no shutdown
+interface fastEthernet 0/1
+ipv6 ospf 2 area 0
+ip address 201.11.0.166 255.255.255.240
+ipv6 address 2001:db8:11:607::6/64
+no shutdown
+interface fastEthernet 1/0
+ipv6 ospf 2 area 2
+ip address 201.11.2.70 255.255.255.240
+ipv6 address 2001:db8:11:5c67::6/64
+no shutdown
+router ospf 1
+router-id 6.6.6.6
+network 201.11.0.160 0.0.0.15 area 0
+network 201.11.0.192 0.0.0.15 area 0
+network 201.11.2.64 0.0.0.15 area 2
+end
+write
+
+-----------------------------------------------------
+R7
+
+vlan database
+vlan 10 name A
+vlan 20 name B
+vlan 30 name C
+exit
+configure terminal
+ip dhcp database nvram:dhcp-router.txt
+ip dhcp excluded-address 10.0.10.71 10.0.10.76
+ip dhcp excluded-address 10.0.10.135 10.0.10.140
+ip dhcp excluded-address 10.0.10.199 10.0.10.204
+ip dhcp pool 10
+network 10.0.10.64 255.255.255.192
+default-router 10.0.10.71
+ip dhcp pool 20
+network 10.0.10.128 255.255.255.192
+default-router 10.0.10.135
+ip dhcp pool 30
+network 10.0.10.192 255.255.255.192
+default-router 10.0.10.199
+exit
+ipv6 unicast-routing
+ipv6 router ospf 2
+router-id 7.7.7.7
+exit
+interface fastEthernet 0/0
+ipv6 ospf 2 area 0
+ip address 201.11.0.167 255.255.255.240
+ipv6 address 2001:db8:11:607::7/64
+ip nat outside
+no shutdown
+interface serial 2/0
+ipv6 ospf 2 area 0
+ip address 201.11.0.71 255.255.255.240
+ipv6 address 2001:db8:11:207::7/64
+encapsulation ppp
+ip nat outside
+no shutdown
+interface fastEthernet 1/0
+switchport mode trunk
+interface fastEthernet 1/1
+switchport mode trunk
+interface range fastEthernet 1/2 - 4
+switchport access vlan 10
+interface range fastEthernet 1/5 - 9
+switchport access vlan 20
+interface range fastEthernet 1/10 - 14
+switchport access vlan 30
+interface vlan 10
+ip address 10.0.10.71 255.255.255.192
+ip nat inside
+interface vlan 20
+ip address 10.0.10.135 255.255.255.192
+ip nat inside
+interface vlan 30
+ip address 10.0.10.199 255.255.255.192
+ip nat inside
+exit
+access-list 10 permit 10.0.10.64 0.0.0.63
+access-list 10 permit 10.0.10.128 0.0.0.63
+access-list 10 permit 10.0.10.192 0.0.0.63
+ip nat inside source list 10 interface fastEthernet 0/0 overload
+router ospf 1
+router-id 7.7.7.7
+network 201.11.0.64 0.0.0.15 area 0
+network 201.11.0.160 0.0.0.15 area 0
+end
+write
+
+-----------------------------------------------------
+SW10
+
+vlan database
+vlan 10 name A
+vlan 20 name B
+vlan 30 name C
+exit
+configure terminal
+no ip routing
+interface fastEthernet 1/0
+switchport mode trunk
+interface fastEthernet 1/1
+switchport mode trunk
+interface range fastEthernet 1/2 - 4
+switchport access vlan 10
+interface range fastEthernet 1/5 - 9
+switchport access vlan 20
+interface range fastEthernet 1/10 - 14
+switchport access vlan 30
+interface vlan 10
+ip address 10.0.10.74 255.255.255.192
+interface vlan 20
+ip address 10.0.10.138 255.255.255.192
+interface vlan 30
+ip address 10.0.10.202 255.255.255.192
+end
+write
+
+-----------------------------------------------------
+SW11
+
+vlan database
+vlan 10 name A
+vlan 20 name B
+vlan 30 name C
+exit
+configure terminal
+no ip routing
+interface fastEthernet 1/0
+switchport mode trunk
+interface fastEthernet 1/1
+switchport mode trunk
+interface range fastEthernet 1/2 - 4
+switchport access vlan 10
+interface range fastEthernet 1/5 - 9
+switchport access vlan 20
+interface range fastEthernet 1/10 - 14
+switchport access vlan 30
+interface vlan 10
+ip address 10.0.10.75 255.255.255.192
+interface vlan 20
+ip address 10.0.10.139 255.255.255.192
+interface vlan 30
+ip address 10.0.10.203 255.255.255.192
+end
+write
+
+-----------------------------------------------------
+SW12
+
+vlan database
+vlan 10 name A
+vlan 20 name B
+vlan 30 name C
+exit
+configure terminal
+no ip routing
+interface fastEthernet 1/0
+switchport mode trunk
+interface fastEthernet 1/1
+switchport mode trunk
+interface range fastEthernet 1/2 - 4
+switchport access vlan 10
+interface range fastEthernet 1/5 - 9
+switchport access vlan 20
+interface range fastEthernet 1/10 - 14
+switchport access vlan 30
+interface vlan 10
+ip address 10.0.10.76 255.255.255.192
+interface vlan 20
+ip address 10.0.10.140 255.255.255.192
+interface vlan 30
+ip address 10.0.10.204 255.255.255.192
+end
+write

@@ -1,0 +1,46 @@
+Nov 30 20:00:43.595 HYPERVISOR: Release 0.2.14-x86/Windows (tag 2014092320)
+Nov 30 20:00:43.596 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 50637.
+Nov 30 20:00:43.626 HYPERVISOR: exec_cmd: hypervisor version 
+Nov 30 20:00:43.634 HYPERVISOR: exec_cmd: hypervisor working_dir G:/Outros/Projecto AR\project-files\dynamips 
+Nov 30 20:00:43.634 GENERAL: working_dir=G:/Outros/Projecto AR\project-files\dynamips
+Nov 30 20:00:43.641 HYPERVISOR: exec_cmd: vm create R8 12 c3725 
+Nov 30 20:00:43.643 VM: VM R8 created.
+Nov 30 20:00:43.649 HYPERVISOR: exec_cmd: vm set_con_tcp_port R8 5012 
+Nov 30 20:00:43.655 HYPERVISOR: exec_cmd: c3725 get_mac_addr R8 
+Nov 30 20:00:43.663 HYPERVISOR: exec_cmd: vm set_disk0 R8 0 
+Nov 30 20:00:43.670 HYPERVISOR: exec_cmd: vm set_nvram R8 256 
+Nov 30 20:00:43.677 HYPERVISOR: exec_cmd: vm get_status R8 
+Nov 30 20:00:43.684 HYPERVISOR: exec_cmd: vm slot_add_binding R8 1 0 NM-16ESW 
+Nov 30 20:00:43.693 HYPERVISOR: exec_cmd: vm get_status R8 
+Nov 30 20:00:43.700 HYPERVISOR: exec_cmd: vm set_idle_pc R8 0x60a68e70 
+Nov 30 20:00:43.707 HYPERVISOR: exec_cmd: vm set_exec_area R8 64 
+Nov 30 20:00:43.715 HYPERVISOR: exec_cmd: vm set_ios R8 C:/Users/ccost/GNS3/images/IOS/c3725-advipservicesk9-mz.124-21.image 
+Nov 30 20:00:43.722 HYPERVISOR: exec_cmd: vm get_status R8 
+Nov 30 20:00:43.729 HYPERVISOR: exec_cmd: vm slot_add_binding R8 2 0 NM-4T 
+Nov 30 20:00:43.742 HYPERVISOR: exec_cmd: vm set_config R8 configs/i12_startup-config.cfg 
+Nov 30 20:02:51.127 HYPERVISOR: exec_cmd: vm rename R8 PC7 
+Nov 30 20:10:44.579 HYPERVISOR: exec_cmd: vm extract_config PC7 
+Nov 30 20:16:02.302 HYPERVISOR: exec_cmd: nio create_udp udp-d93e3495-2dbb-4448-abed-c05829d023d6 10028 127.0.0.1 10029 
+Nov 30 20:16:02.321 HYPERVISOR: exec_cmd: vm slot_add_nio_binding PC7 0 0 udp-d93e3495-2dbb-4448-abed-c05829d023d6 
+Nov 30 20:16:02.332 HYPERVISOR: exec_cmd: vm get_status PC7 
+Nov 30 20:22:40.041 HYPERVISOR: exec_cmd: vm get_status PC7 
+Nov 30 20:22:40.055 HYPERVISOR: exec_cmd: vm slot_remove_binding PC7 2 0 
+Nov 30 20:22:40.070 HYPERVISOR: exec_cmd: vm get_status PC7 
+Nov 30 20:22:40.085 HYPERVISOR: exec_cmd: vm slot_remove_binding PC7 1 0 
+Nov 30 20:28:03.678 HYPERVISOR: exec_cmd: vm extract_config PC7 
+Nov 30 20:45:46.411 HYPERVISOR: exec_cmd: vm extract_config PC7 
+Nov 30 21:19:11.858 HYPERVISOR: exec_cmd: vm set_ghost_status PC7 2 
+Nov 30 21:19:11.869 HYPERVISOR: exec_cmd: vm set_ghost_file PC7 c3725-advipservicesk9-mz.124-21.image-128.ghost 
+Nov 30 21:19:11.880 HYPERVISOR: exec_cmd: vm get_status PC7 
+Nov 30 21:19:11.913 HYPERVISOR: exec_cmd: vm start PC7 
+Nov 30 21:35:13.534 HYPERVISOR: exec_cmd: vm extract_config PC7 
+Nov 30 21:47:19.710 HYPERVISOR: exec_cmd: vm get_status PC7 
+Nov 30 21:47:19.730 HYPERVISOR: exec_cmd: vm stop PC7 
+Nov 30 21:47:19.838 VM: VM PC7 shutdown.
+Nov 30 21:47:19.848 HYPERVISOR: exec_cmd: vm extract_config PC7 
+Nov 30 21:47:28.432 HYPERVISOR: exec_cmd: vm get_status PC7 
+Nov 30 21:47:28.588 HYPERVISOR: exec_cmd: vm start PC7 
+Nov 30 21:59:53.613 HYPERVISOR: exec_cmd: vm get_status PC7 
+Nov 30 21:59:53.664 HYPERVISOR: exec_cmd: vm stop PC7 
+Nov 30 21:59:53.769 VM: VM PC7 shutdown.
+Nov 30 21:59:53.781 HYPERVISOR: exec_cmd: vm extract_config PC7 

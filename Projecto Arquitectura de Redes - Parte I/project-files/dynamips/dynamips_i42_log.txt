@@ -1,0 +1,27 @@
+Dec 06 18:59:29.891 HYPERVISOR: Release 0.2.16-amd64/Darwin (tag 2015060118)
+Dec 06 18:59:29.891 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 49899.
+Dec 06 18:59:29.983 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 06 18:59:30.006 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/MarianaCruz/Downloads/Projecto Arquitectura de Redes/project-files/dynamips 
+Dec 06 18:59:30.006 GENERAL: working_dir=/Users/MarianaCruz/Downloads/Projecto Arquitectura de Redes/project-files/dynamips
+Dec 06 18:59:30.013 HYPERVISOR: exec_cmd: vm create PC7 12 c3725 
+Dec 06 18:59:30.013 VM: VM PC7 created.
+Dec 06 18:59:30.020 HYPERVISOR: exec_cmd: vm set_con_tcp_port PC7 5012 
+Dec 06 18:59:30.033 HYPERVISOR: exec_cmd: c3725 get_mac_addr PC7 
+Dec 06 18:59:30.055 HYPERVISOR: exec_cmd: vm set_nvram PC7 256 
+Dec 06 18:59:30.062 HYPERVISOR: exec_cmd: vm set_ios PC7 /Users/MarianaCruz/GNS3/images/IOS/IOS/c3725-advipservicesk9-mz.124-21.image 
+Dec 06 18:59:30.067 HYPERVISOR: exec_cmd: c3725 set_mac_addr PC7 c20c.1344.0000 
+Dec 06 18:59:30.071 HYPERVISOR: exec_cmd: vm set_disk0 PC7 0 
+Dec 06 18:59:30.092 HYPERVISOR: exec_cmd: vm get_status PC7 
+Dec 06 18:59:30.112 HYPERVISOR: exec_cmd: vm set_idle_pc PC7 0x60a68e70 
+Dec 06 18:59:30.118 HYPERVISOR: exec_cmd: vm set_config PC7 configs/i12_startup-config.cfg 
+Dec 06 18:59:30.985 HYPERVISOR: exec_cmd: nio create_udp udp-28f64736-13ce-42f1-a307-7210e739b6ac 10028 127.0.0.1 10029 
+Dec 06 18:59:31.008 HYPERVISOR: exec_cmd: vm slot_add_nio_binding PC7 0 0 udp-28f64736-13ce-42f1-a307-7210e739b6ac 
+Dec 06 18:59:31.018 HYPERVISOR: exec_cmd: vm get_status PC7 
+Dec 06 20:07:59.053 HYPERVISOR: exec_cmd: vm extract_config PC7 
+Dec 06 20:08:14.477 HYPERVISOR: exec_cmd: vm get_status PC7 
+Dec 06 20:08:14.497 HYPERVISOR: exec_cmd: vm extract_config PC7 
+Dec 06 20:08:14.538 HYPERVISOR: exec_cmd: vm delete PC7 
+Dec 06 20:08:14.557 VM: VM PC7 destroyed.
+Dec 06 20:08:14.611 HYPERVISOR: exec_cmd: hypervisor stop 
+Dec 06 20:08:14.812 HYPERVISOR: Stopped.
+Dec 06 20:08:14.812 GENERAL: reset done.

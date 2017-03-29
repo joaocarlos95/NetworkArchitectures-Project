@@ -1,0 +1,33 @@
+Dec 10 17:52:21.860 HYPERVISOR: Release 0.2.16-amd64/Darwin (tag 2015060118)
+Dec 10 17:52:21.860 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 51643.
+Dec 10 17:52:22.792 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 10 17:52:23.332 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/MarianaCruz/Downloads/Projecto Arquitectura de Redes - Parte 2/project-files/dynamips 
+Dec 10 17:52:23.332 GENERAL: working_dir=/Users/MarianaCruz/Downloads/Projecto Arquitectura de Redes - Parte 2/project-files/dynamips
+Dec 10 17:52:23.340 HYPERVISOR: exec_cmd: vm create PC3 27 c3725 
+Dec 10 17:52:24.288 VM: VM PC3 created.
+Dec 10 17:52:24.299 HYPERVISOR: exec_cmd: vm set_con_tcp_port PC3 5015 
+Dec 10 17:52:24.305 HYPERVISOR: exec_cmd: c3725 get_mac_addr PC3 
+Dec 10 17:52:24.310 HYPERVISOR: exec_cmd: vm set_disk0 PC3 0 
+Dec 10 17:52:24.315 HYPERVISOR: exec_cmd: c3725 set_mac_addr PC3 c21b.2083.0000 
+Dec 10 17:52:24.320 HYPERVISOR: exec_cmd: vm set_nvram PC3 256 
+Dec 10 17:52:24.326 HYPERVISOR: exec_cmd: vm set_ios PC3 /Users/MarianaCruz/GNS3/images/IOS/IOS/c3725-advipservicesk9-mz.124-21.image 
+Dec 10 17:52:24.331 HYPERVISOR: exec_cmd: vm set_config PC3 configs/i27_startup-config.cfg 
+Dec 10 17:52:26.294 HYPERVISOR: exec_cmd: nio create_udp udp-bd15e2c2-6de7-4e48-b480-1a7206664850 10026 127.0.0.1 10027 
+Dec 10 17:52:26.304 HYPERVISOR: exec_cmd: vm slot_add_nio_binding PC3 0 0 udp-bd15e2c2-6de7-4e48-b480-1a7206664850 
+Dec 10 17:52:26.324 HYPERVISOR: exec_cmd: vm get_status PC3 
+Dec 10 17:52:42.806 HYPERVISOR: exec_cmd: vm set_ghost_status PC3 2 
+Dec 10 17:52:42.810 HYPERVISOR: exec_cmd: vm set_ghost_file PC3 c3725-advipservicesk9-mz.124-21.image-128.ghost 
+Dec 10 17:52:42.818 HYPERVISOR: exec_cmd: vm get_status PC3 
+Dec 10 17:52:42.820 HYPERVISOR: exec_cmd: vm start PC3 
+Dec 10 19:08:07.035 HYPERVISOR: exec_cmd: vm get_status PC3 
+Dec 10 19:08:07.076 HYPERVISOR: exec_cmd: vm stop PC3 
+Dec 10 19:08:11.615 VM: VM PC3 shutdown.
+Dec 10 19:08:11.616 HYPERVISOR: exec_cmd: vm extract_config PC3 
+Dec 11 13:43:35.611 HYPERVISOR: exec_cmd: vm extract_config PC3 
+Dec 11 13:43:36.113 HYPERVISOR: exec_cmd: vm get_status PC3 
+Dec 11 13:43:36.163 HYPERVISOR: exec_cmd: vm extract_config PC3 
+Dec 11 13:43:36.259 HYPERVISOR: exec_cmd: vm delete PC3 
+Dec 11 13:43:36.334 VM: VM PC3 destroyed.
+Dec 11 13:43:36.500 HYPERVISOR: exec_cmd: hypervisor stop 
+Dec 11 13:43:36.979 HYPERVISOR: Stopped.
+Dec 11 13:43:36.979 GENERAL: reset done.

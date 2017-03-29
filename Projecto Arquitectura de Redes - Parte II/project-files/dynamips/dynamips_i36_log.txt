@@ -1,0 +1,30 @@
+Nov 30 20:07:45.867 HYPERVISOR: Release 0.2.14-x86/Windows (tag 2014092320)
+Nov 30 20:07:45.868 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 50705.
+Nov 30 20:07:45.897 HYPERVISOR: exec_cmd: hypervisor version 
+Nov 30 20:07:45.904 HYPERVISOR: exec_cmd: hypervisor working_dir G:/Outros/Projecto AR\project-files\dynamips 
+Nov 30 20:07:45.905 GENERAL: working_dir=G:/Outros/Projecto AR\project-files\dynamips
+Nov 30 20:07:45.912 HYPERVISOR: exec_cmd: vm create AUTOIDLEPC 20 c3725 
+Nov 30 20:07:45.913 VM: VM AUTOIDLEPC created.
+Nov 30 20:07:45.919 HYPERVISOR: exec_cmd: vm set_con_tcp_port AUTOIDLEPC 5006 
+Nov 30 20:07:45.926 HYPERVISOR: exec_cmd: c3725 get_mac_addr AUTOIDLEPC 
+Nov 30 20:07:45.933 HYPERVISOR: exec_cmd: vm set_ios AUTOIDLEPC C:/Users/ccost/GNS3/images/IOS/c3725-advipservicesk9-mz.124-21.image 
+Nov 30 20:07:45.961 HYPERVISOR: exec_cmd: vm get_status AUTOIDLEPC 
+Nov 30 20:07:45.969 HYPERVISOR: exec_cmd: vm set_idle_pc AUTOIDLEPC 0x0 
+Nov 30 20:07:45.976 HYPERVISOR: exec_cmd: vm get_status AUTOIDLEPC 
+Nov 30 20:07:45.982 HYPERVISOR: exec_cmd: vm get_status AUTOIDLEPC 
+Nov 30 20:07:45.990 HYPERVISOR: exec_cmd: vm start AUTOIDLEPC 
+Nov 30 20:08:06.371 HYPERVISOR: exec_cmd: vm get_status AUTOIDLEPC 
+Nov 30 20:08:06.390 HYPERVISOR: exec_cmd: vm get_idle_pc_prop AUTOIDLEPC 0 
+Nov 30 20:08:16.631 HYPERVISOR: exec_cmd: vm get_status AUTOIDLEPC 
+Nov 30 20:08:16.638 HYPERVISOR: exec_cmd: vm set_idle_pc_online AUTOIDLEPC 0 0x60a68e70 
+Nov 30 20:08:16.645 HYPERVISOR: exec_cmd: vm cpu_usage AUTOIDLEPC 0 
+Nov 30 20:08:19.659 HYPERVISOR: exec_cmd: vm cpu_usage AUTOIDLEPC 0 
+Nov 30 20:08:19.680 HYPERVISOR: exec_cmd: vm get_status AUTOIDLEPC 
+Nov 30 20:08:19.695 HYPERVISOR: exec_cmd: vm stop AUTOIDLEPC 
+Nov 30 20:08:19.793 VM: VM AUTOIDLEPC shutdown.
+Nov 30 20:08:19.824 HYPERVISOR: exec_cmd: vm get_status AUTOIDLEPC 
+Nov 30 20:08:19.831 HYPERVISOR: exec_cmd: vm delete AUTOIDLEPC 
+Nov 30 20:08:19.831 VM: VM AUTOIDLEPC destroyed.
+Nov 30 20:08:19.842 HYPERVISOR: exec_cmd: hypervisor stop 
+Nov 30 20:08:19.903 HYPERVISOR: Stopped.
+Nov 30 20:08:19.904 GENERAL: reset done.

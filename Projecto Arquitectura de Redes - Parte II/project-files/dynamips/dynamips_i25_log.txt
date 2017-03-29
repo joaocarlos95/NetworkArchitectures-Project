@@ -1,0 +1,26 @@
+Dec 09 22:00:33.561 HYPERVISOR: Release 0.2.14-x86/Windows (tag 2014092320)
+Dec 09 22:00:33.561 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 11101.
+Dec 09 22:00:33.718 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 09 22:00:33.754 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\ccost\Desktop\Projecto Arquitectura de Redes - Parte 2\project-files\dynamips 
+Dec 09 22:00:33.754 GENERAL: working_dir=C:\Users\ccost\Desktop\Projecto Arquitectura de Redes - Parte 2\project-files\dynamips
+Dec 09 22:00:33.789 HYPERVISOR: exec_cmd: vm create PC4 32 c3725 
+Dec 09 22:00:33.790 VM: VM PC4 created.
+Dec 09 22:00:33.828 HYPERVISOR: exec_cmd: vm set_con_tcp_port PC4 5021 
+Dec 09 22:00:33.877 HYPERVISOR: exec_cmd: c3725 get_mac_addr PC4 
+Dec 09 22:00:33.910 HYPERVISOR: exec_cmd: vm set_nvram PC4 256 
+Dec 09 22:00:33.938 HYPERVISOR: exec_cmd: c3725 set_mac_addr PC4 c220.20ce.0000 
+Dec 09 22:00:33.978 HYPERVISOR: exec_cmd: vm set_ios PC4 C:/Users/ccost/GNS3/images/IOS/c3725-advipservicesk9-mz.124-21.image 
+Dec 09 22:00:34.018 HYPERVISOR: exec_cmd: vm set_disk0 PC4 0 
+Dec 09 22:00:34.058 HYPERVISOR: exec_cmd: vm set_exec_area PC4 64 
+Dec 09 22:00:34.095 HYPERVISOR: exec_cmd: vm set_config PC4 configs/i32_startup-config.cfg 
+Dec 09 22:00:36.856 HYPERVISOR: exec_cmd: nio create_udp udp-759e1566-013c-4bea-ad11-e8d95cfbf40e 10045 127.0.0.1 10044 
+Dec 09 22:00:36.909 HYPERVISOR: exec_cmd: vm slot_add_nio_binding PC4 0 0 udp-759e1566-013c-4bea-ad11-e8d95cfbf40e 
+Dec 09 22:00:36.943 HYPERVISOR: exec_cmd: vm get_status PC4 
+Dec 09 22:04:26.693 HYPERVISOR: exec_cmd: vm extract_config PC4 
+Dec 09 22:04:27.335 HYPERVISOR: exec_cmd: vm get_status PC4 
+Dec 09 22:04:27.495 HYPERVISOR: exec_cmd: vm extract_config PC4 
+Dec 09 22:04:27.651 HYPERVISOR: exec_cmd: vm delete PC4 
+Dec 09 22:04:27.651 VM: VM PC4 destroyed.
+Dec 09 22:04:27.816 HYPERVISOR: exec_cmd: hypervisor stop 
+Dec 09 22:04:28.299 HYPERVISOR: Stopped.
+Dec 09 22:04:28.299 GENERAL: reset done.

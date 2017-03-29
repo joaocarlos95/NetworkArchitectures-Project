@@ -1,0 +1,29 @@
+Dec 09 22:00:32.758 HYPERVISOR: Release 0.2.14-x86/Windows (tag 2014092320)
+Dec 09 22:00:32.758 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 11089.
+Dec 09 22:00:32.934 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 09 22:00:32.970 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\ccost\Desktop\Projecto Arquitectura de Redes - Parte 2\project-files\dynamips 
+Dec 09 22:00:32.970 GENERAL: working_dir=C:\Users\ccost\Desktop\Projecto Arquitectura de Redes - Parte 2\project-files\dynamips
+Dec 09 22:00:33.009 HYPERVISOR: exec_cmd: vm create R14 26 c3725 
+Dec 09 22:00:33.010 VM: VM R14 created.
+Dec 09 22:00:33.043 HYPERVISOR: exec_cmd: vm set_con_tcp_port R14 5014 
+Dec 09 22:00:33.077 HYPERVISOR: exec_cmd: c3725 get_mac_addr R14 
+Dec 09 22:00:33.112 HYPERVISOR: exec_cmd: vm set_nvram R14 256 
+Dec 09 22:00:33.158 HYPERVISOR: exec_cmd: c3725 set_mac_addr R14 c21a.2074.0000 
+Dec 09 22:00:33.214 HYPERVISOR: exec_cmd: vm set_ios R14 C:/Users/ccost/GNS3/images/IOS/c3725-advipservicesk9-mz.124-21.image 
+Dec 09 22:00:33.252 HYPERVISOR: exec_cmd: vm set_disk0 R14 0 
+Dec 09 22:00:33.288 HYPERVISOR: exec_cmd: vm set_exec_area R14 64 
+Dec 09 22:00:33.343 HYPERVISOR: exec_cmd: vm set_config R14 configs/i26_startup-config.cfg 
+Dec 09 22:00:36.129 HYPERVISOR: exec_cmd: nio create_udp udp-5f4717e8-8ded-49ab-9fb7-bc4e393b392c 10031 127.0.0.1 10030 
+Dec 09 22:00:36.182 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R14 0 1 udp-5f4717e8-8ded-49ab-9fb7-bc4e393b392c 
+Dec 09 22:00:36.226 HYPERVISOR: exec_cmd: vm get_status R14 
+Dec 09 22:00:37.311 HYPERVISOR: exec_cmd: nio create_udp udp-4029f910-5ff9-4161-91e7-71a6832905ed 10056 127.0.0.1 10057 
+Dec 09 22:00:37.341 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R14 0 0 udp-4029f910-5ff9-4161-91e7-71a6832905ed 
+Dec 09 22:00:37.373 HYPERVISOR: exec_cmd: vm get_status R14 
+Dec 09 22:04:26.831 HYPERVISOR: exec_cmd: vm extract_config R14 
+Dec 09 22:04:27.325 HYPERVISOR: exec_cmd: vm get_status R14 
+Dec 09 22:04:27.481 HYPERVISOR: exec_cmd: vm extract_config R14 
+Dec 09 22:04:27.639 HYPERVISOR: exec_cmd: vm delete R14 
+Dec 09 22:04:27.639 VM: VM R14 destroyed.
+Dec 09 22:04:27.805 HYPERVISOR: exec_cmd: hypervisor stop 
+Dec 09 22:04:28.014 HYPERVISOR: Stopped.
+Dec 09 22:04:28.014 GENERAL: reset done.

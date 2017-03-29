@@ -1,0 +1,51 @@
+Dec 11 18:03:26.925 HYPERVISOR: Release 0.2.16-amd64/Darwin (tag 2015060118)
+Dec 11 18:03:26.926 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 53102.
+Dec 11 18:03:27.034 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 11 18:03:27.039 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/MarianaCruz/Desktop/IST/AR,SO,BD/AR/Projecto Arquitectura de Redes - P I/project-files/dynamips 
+Dec 11 18:03:27.039 GENERAL: working_dir=/Users/MarianaCruz/Desktop/IST/AR,SO,BD/AR/Projecto Arquitectura de Redes - P I/project-files/dynamips
+Dec 11 18:03:27.043 HYPERVISOR: exec_cmd: vm create SwR7 21 c3725 
+Dec 11 18:03:27.076 VM: VM SwR7 created.
+Dec 11 18:03:27.087 HYPERVISOR: exec_cmd: vm set_con_tcp_port SwR7 5006 
+Dec 11 18:03:27.106 HYPERVISOR: exec_cmd: c3725 get_mac_addr SwR7 
+Dec 11 18:03:27.140 HYPERVISOR: exec_cmd: vm set_disk0 SwR7 1 
+Dec 11 18:03:27.147 HYPERVISOR: exec_cmd: c3725 set_mac_addr SwR7 c215.1e64.0000 
+Dec 11 18:03:27.156 HYPERVISOR: exec_cmd: vm get_status SwR7 
+Dec 11 18:03:27.181 HYPERVISOR: exec_cmd: vm set_idle_pc SwR7 0x60a68e70 
+Dec 11 18:03:27.192 HYPERVISOR: exec_cmd: vm get_status SwR7 
+Dec 11 18:03:27.245 HYPERVISOR: exec_cmd: vm slot_add_binding SwR7 1 0 NM-16ESW 
+Dec 11 18:03:27.258 HYPERVISOR: exec_cmd: vm set_nvram SwR7 512 
+Dec 11 18:03:27.275 HYPERVISOR: exec_cmd: vm get_status SwR7 
+Dec 11 18:03:27.287 HYPERVISOR: exec_cmd: vm slot_add_binding SwR7 2 0 NM-4T 
+Dec 11 18:03:27.300 HYPERVISOR: exec_cmd: vm set_ios SwR7 /Users/MarianaCruz/GNS3/images/IOS/IOS/c3725-advipservicesk9-mz.124-21.image 
+Dec 11 18:03:27.329 HYPERVISOR: exec_cmd: vm set_config SwR7 configs/i21_startup-config.cfg 
+Dec 11 18:03:27.941 HYPERVISOR: exec_cmd: nio create_udp udp-74db9188-c57b-48ae-9ff1-4640f6613970 10038 127.0.0.1 10039 
+Dec 11 18:03:27.983 HYPERVISOR: exec_cmd: vm slot_add_nio_binding SwR7 1 0 udp-74db9188-c57b-48ae-9ff1-4640f6613970 
+Dec 11 18:03:27.997 HYPERVISOR: exec_cmd: vm get_status SwR7 
+Dec 11 18:03:28.016 HYPERVISOR: exec_cmd: nio create_udp udp-ce536308-88d8-425b-8f97-a6e407491435 10040 127.0.0.1 10041 
+Dec 11 18:03:28.041 HYPERVISOR: exec_cmd: vm slot_add_nio_binding SwR7 0 0 udp-ce536308-88d8-425b-8f97-a6e407491435 
+Dec 11 18:03:28.061 HYPERVISOR: exec_cmd: vm get_status SwR7 
+Dec 11 18:03:28.109 HYPERVISOR: exec_cmd: nio create_udp udp-0b82f8b9-9f12-4906-8e38-8b396b8ef04c 10043 127.0.0.1 10042 
+Dec 11 18:03:28.126 HYPERVISOR: exec_cmd: vm slot_add_nio_binding SwR7 2 0 udp-0b82f8b9-9f12-4906-8e38-8b396b8ef04c 
+Dec 11 18:03:28.130 HYPERVISOR: exec_cmd: vm get_status SwR7 
+Dec 11 18:03:28.164 HYPERVISOR: exec_cmd: nio create_udp udp-5cb8d242-c285-4db0-b44c-7a8479fa1651 10045 127.0.0.1 10044 
+Dec 11 18:03:28.167 HYPERVISOR: exec_cmd: vm slot_add_nio_binding SwR7 1 1 udp-5cb8d242-c285-4db0-b44c-7a8479fa1651 
+Dec 11 18:03:28.169 HYPERVISOR: exec_cmd: vm get_status SwR7 
+Dec 11 18:03:35.365 HYPERVISOR: exec_cmd: vm set_ghost_status SwR7 2 
+Dec 11 18:03:35.368 HYPERVISOR: exec_cmd: vm set_ghost_file SwR7 c3725-advipservicesk9-mz.124-21.image-128.ghost 
+Dec 11 18:03:35.370 HYPERVISOR: exec_cmd: vm get_status SwR7 
+Dec 11 18:03:35.371 HYPERVISOR: exec_cmd: vm start SwR7 
+Dec 11 19:02:40.490 HYPERVISOR: exec_cmd: vm get_status SwR7 
+Dec 11 19:02:41.321 HYPERVISOR: exec_cmd: vm stop SwR7 
+Dec 11 19:02:41.970 VM: VM SwR7 shutdown.
+Dec 11 19:02:44.002 HYPERVISOR: exec_cmd: vm extract_config SwR7 
+Dec 11 19:03:54.083 HYPERVISOR: exec_cmd: vm extract_config SwR7 
+Dec 11 19:04:03.013 HYPERVISOR: exec_cmd: vm extract_config SwR7 
+Dec 11 19:04:03.928 HYPERVISOR: exec_cmd: vm extract_config SwR7 
+Dec 11 19:04:07.189 HYPERVISOR: exec_cmd: vm extract_config SwR7 
+Dec 11 19:04:09.369 HYPERVISOR: exec_cmd: vm get_status SwR7 
+Dec 11 19:04:09.393 HYPERVISOR: exec_cmd: vm extract_config SwR7 
+Dec 11 19:04:09.411 HYPERVISOR: exec_cmd: vm delete SwR7 
+Dec 11 19:04:09.416 VM: VM SwR7 destroyed.
+Dec 11 19:04:09.496 HYPERVISOR: exec_cmd: hypervisor stop 
+Dec 11 19:04:09.991 HYPERVISOR: Stopped.
+Dec 11 19:04:09.992 GENERAL: reset done.

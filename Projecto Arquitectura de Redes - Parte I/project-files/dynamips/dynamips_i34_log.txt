@@ -1,0 +1,21 @@
+Nov 30 20:05:32.934 HYPERVISOR: Release 0.2.14-x86/Windows (tag 2014092320)
+Nov 30 20:05:32.934 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 50680.
+Nov 30 20:05:32.958 HYPERVISOR: exec_cmd: hypervisor version 
+Nov 30 20:05:32.966 HYPERVISOR: exec_cmd: hypervisor working_dir G:/Outros/Projecto AR\project-files\dynamips 
+Nov 30 20:05:32.966 GENERAL: working_dir=G:/Outros/Projecto AR\project-files\dynamips
+Nov 30 20:05:32.973 HYPERVISOR: exec_cmd: ethsw create SW1 
+Nov 30 20:05:38.500 HYPERVISOR: exec_cmd: ethsw rename SW1 SW8 
+Nov 30 20:16:21.717 HYPERVISOR: exec_cmd: nio create_udp udp-13edd198-8fb8-4565-a5e9-994ebe0efc65 10034 127.0.0.1 10035 
+Nov 30 20:16:21.736 HYPERVISOR: exec_cmd: ethsw add_nio SW8 udp-13edd198-8fb8-4565-a5e9-994ebe0efc65 
+Nov 30 20:16:21.765 HYPERVISOR: exec_cmd: ethsw set_access_port SW8 udp-13edd198-8fb8-4565-a5e9-994ebe0efc65 1 
+Nov 30 20:16:28.100 HYPERVISOR: exec_cmd: nio create_udp udp-35a3650e-6489-423a-b389-a9cfc9562c08 10036 127.0.0.1 10037 
+Nov 30 20:16:28.120 HYPERVISOR: exec_cmd: ethsw add_nio SW8 udp-35a3650e-6489-423a-b389-a9cfc9562c08 
+Nov 30 20:16:28.151 HYPERVISOR: exec_cmd: ethsw set_access_port SW8 udp-35a3650e-6489-423a-b389-a9cfc9562c08 1 
+Nov 30 20:16:33.571 HYPERVISOR: exec_cmd: nio create_udp udp-8a16bb24-d6f2-42cf-a80c-57c6518cec58 10039 127.0.0.1 10038 
+Nov 30 20:16:33.584 HYPERVISOR: exec_cmd: ethsw add_nio SW8 udp-8a16bb24-d6f2-42cf-a80c-57c6518cec58 
+Nov 30 20:16:33.611 HYPERVISOR: exec_cmd: ethsw set_access_port SW8 udp-8a16bb24-d6f2-42cf-a80c-57c6518cec58 1 
+Nov 30 20:32:46.154 HYPERVISOR: exec_cmd: ethsw remove_nio SW8 udp-8a16bb24-d6f2-42cf-a80c-57c6518cec58 
+Nov 30 20:32:46.184 HYPERVISOR: exec_cmd: nio delete udp-8a16bb24-d6f2-42cf-a80c-57c6518cec58 
+Nov 30 20:33:45.112 HYPERVISOR: exec_cmd: nio create_udp udp-2b5713c2-1fb7-4faa-9c67-9482fbcb9e57 10041 127.0.0.1 10040 
+Nov 30 20:33:45.127 HYPERVISOR: exec_cmd: ethsw add_nio SW8 udp-2b5713c2-1fb7-4faa-9c67-9482fbcb9e57 
+Nov 30 20:33:45.152 HYPERVISOR: exec_cmd: ethsw set_access_port SW8 udp-2b5713c2-1fb7-4faa-9c67-9482fbcb9e57 1 

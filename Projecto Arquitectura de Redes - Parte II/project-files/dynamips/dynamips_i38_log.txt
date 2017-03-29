@@ -1,0 +1,20 @@
+Dec 09 13:26:12.144 HYPERVISOR: Release 0.2.14-amd64/Linux (tag 2014092320)
+Dec 09 13:26:12.144 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 34622.
+Dec 09 13:26:12.159 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 09 13:26:12.159 HYPERVISOR: exec_cmd: hypervisor working_dir /afs/.ist.utl.pt/users/2/8/ist182528/Desktop/Projecto Arquitectura de Redes - Parte 2 (teste)/project-files/dynamips 
+Dec 09 13:26:12.159 GENERAL: working_dir=/afs/.ist.utl.pt/users/2/8/ist182528/Desktop/Projecto Arquitectura de Redes - Parte 2 (teste)/project-files/dynamips
+Dec 09 13:26:12.160 HYPERVISOR: exec_cmd: vm create R18 35 c3725 
+Dec 09 13:26:12.164 VM: VM R18 created.
+Dec 09 13:26:12.164 HYPERVISOR: exec_cmd: vm set_con_tcp_port R18 5022 
+Dec 09 13:26:12.165 HYPERVISOR: exec_cmd: c3725 get_mac_addr R18 
+Dec 09 13:26:12.166 HYPERVISOR: exec_cmd: vm set_ios R18 /afs/.ist.utl.pt/users/2/8/ist182528/GNS3/images/IOS/c3725-advipservicesk9-mz.124-21.image 
+Dec 09 13:26:12.166 HYPERVISOR: exec_cmd: vm set_nvram R18 256 
+Dec 09 13:26:12.167 HYPERVISOR: exec_cmd: vm set_disk0 R18 0 
+Dec 09 13:26:12.171 HYPERVISOR: exec_cmd: vm set_config R18 configs/i35_startup-config.cfg 
+Dec 09 13:26:42.107 HYPERVISOR: exec_cmd: vm get_status R18 
+Dec 09 13:26:42.108 HYPERVISOR: exec_cmd: vm extract_config R18 
+Dec 09 13:26:42.109 HYPERVISOR: exec_cmd: vm delete R18 
+Dec 09 13:26:42.109 VM: VM R18 destroyed.
+Dec 09 13:26:42.115 HYPERVISOR: exec_cmd: hypervisor stop 
+Dec 09 13:26:42.187 HYPERVISOR: Stopped.
+Dec 09 13:26:42.187 GENERAL: reset done.
