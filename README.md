@@ -1,5 +1,9 @@
 # Network Architectures Project (2016-2017)
 
+### Contributors
+- @jtf16 - João Freitas
+- @MarianaCruz - Mariana Cruz
+
 ### About
 The main objective is to design, configure, and test a networking solution for an Internet Service Provider.
 
